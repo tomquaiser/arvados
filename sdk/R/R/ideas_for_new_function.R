@@ -426,18 +426,7 @@ projects_properties.delete = function(oneProp, uuid)
 
 # ideas: projects_properties.get, projects_properties.delete
 # ------------------ WRITE ----------------
-# zupełnie nie mam na to pomysłu
-# plik Collection -> tamte metody wykorzystuję
-
-zapisywanie = function(con, fileName, fileContent) # jeżeli metoda pisana do ArvadosFile
-{
-  ArvFile <- Collection$create(fileName) # or Collection$create # stworzenie pliku
-  ArvFile <- Collection$get(fileName)
-  arvConnection <- ArvFile$connection("w")
-
-  
-  
-}
+# to be continued
 
 
 
