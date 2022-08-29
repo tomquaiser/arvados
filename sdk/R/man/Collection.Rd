@@ -4,7 +4,8 @@
 \alias{Collection}
 \title{Collection}
 \description{
-Collection class provides interface for working with Arvados collections.
+Collection class provides interface for working with Arvados collections,
+for exaplme actions like creating, updating, moving or removing are possible.
 }
 \section{Usage}{
 
@@ -22,28 +23,41 @@ Collection class provides interface for working with Arvados collections.
 \section{Methods}{
 
 \describe{
-  \item{add(content)}{Adds ArvadosFile or Subcollection specified by content to the collection.}
-  \item{create(files)}{Creates one or more ArvadosFiles and adds them to the collection at specified path.}
-  \item{remove(fileNames)}{Remove one or more files from the collection.}
-  \item{move(content, destination)}{Moves ArvadosFile or Subcollection to another location in the collection.}
-  \item{copy(content, destination)}{Copies ArvadosFile or Subcollection to another location in the collection.}
-  \item{getFileListing()}{Returns collections file content as character vector.}
-  \item{get(relativePath)}{If relativePath is valid, returns ArvadosFile or Subcollection specified by relativePath, else returns NULL.}
+	\item{}{\code{\link{add}}}
+	\item{}{\code{\link{create}}}
+	\item{}{\code{\link{remove}}}
+	\item{}{\code{\link{move}}}
+	\item{}{\code{\link{readArvFile}}}
+	\item{}{\code{\link{copy}}}
+	\item{}{\code{\link{getFileListing}}}
+	\item{}{\code{\link{get}}}
 }
 }
 
 \examples{
 \dontrun{
+# initialize API and a collection object:
 arv <- Arvados$new("your Arvados token", "example.arvadosapi.com")
 collection <- Collection$new(arv, "uuid")
 
-createdFiles <- collection$create(c("main.cpp", lib.dll), "cpp/src/")
+# Create new file in a collection
+mainFile <- collection$create("cpp/src/main.cpp")[[1]]
+fileList <- collection$create(c("main.cpp", lib.dll), "cpp/src/")
+# NOTE: It returns a vector of one or more ArvadosFile objects
 
-collection$remove("location/to/my/file.cpp")
-
-collection$move("folder/file.cpp", "file.cpp")
-
+# Get ArvadosFile or Subcollection from internal tree-like structure
 arvadosFile <- collection$get("location/to/my/file.cpp")
 arvadosSubcollection <- collection$get("location/to/my/directory/")
+
+# Delete file or list of them from a collection
+collection$remove("location/to/my/file.cpp") # delete file
+collection$remove(c("path/to/my/file.cpp", "path/to/other/file.cpp")) # delete list of files
+# NOTE: You can remove both Subcollection and ArvadosFile. If subcollection contains more files or folders they will be removed recursively.
+
+# Move or rename a file or folder within a collection
+collection$move("folder/file.cpp", "file.cpp")
 }
+}
+\seealso{
+\code{\link{https://github.com/arvados/arvados/tree/main/sdk/R}}
 }

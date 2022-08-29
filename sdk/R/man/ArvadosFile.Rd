@@ -21,16 +21,16 @@ ArvadosFile class represents a file inside Arvados collection.
 \section{Methods}{
 
 \describe{
-  \item{getName()}{Returns name of the file.}
-  \item{getRelativePath()}{Returns file path relative to the root.}
-  \item{read(contentType = "raw", offset = 0, length = 0)}{Read file content.}
-  \item{write(content, contentType = "text/html")}{Write to file (override current content of the file).}
-  \item{connection(rw)}{Get connection opened in "read" or "write" mode.}
-  \item{flush()}{Write connections content to a file (override current content of the file).}
-  \item{remove(name)}{Removes ArvadosFile or Subcollection specified by name from the subcollection.}
-  \item{getSizeInBytes()}{Returns file size in bytes.}
-  \item{move(destination)}{Moves file to a new location inside collection.}
-  \item{copy(destination)}{Copies file to a new location inside collection.}
+  \item{}{\code{\link{getName}}}
+  \item{}{\code{\link{getRelativePath}}}
+  \item{}{\code{\link{read}}}
+  \item{}{\code{\link{write}}}
+  \item{}{\code{\link{connection}}}
+  \item{}{\code{\link{flush}}}
+  \item{}{\code{\link{remove}}}
+  \item{}{\code{\link{getSizeInBytes}}}
+  \item{}{\code{\link{move}}}
+  \item{}{\code{\link{copy}}}
 }
 }
 
