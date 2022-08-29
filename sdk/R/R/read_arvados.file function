@@ -41,7 +41,7 @@ read_arvados.file <- function(file, collection, sep = ',', istable = NULL, filec
         arvConnection <- arvadosFile$connection("r")
         if (FileFormat == "tsv"){
           mytable <- read.table(arvConnection, sep = '\t')
-        } else if (FileFormat == "csv" & sep = '\t') {
+        } else if (FileFormat == "csv" & sep == '\t') {
           mytable <- read.table(arvConnection, sep = '\t')
         } else if (FileFormat == "csv") {
         mytable <- read.table(arvConnection, sep = ',')
