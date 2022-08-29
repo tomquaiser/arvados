@@ -2,56 +2,56 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 
-#' api_clients.get
+#' api_clients_get
 #'
-#' api_clients.get is a method defined in Arvados class.
+#' api_clients_get is a method defined in Arvados class.
 #'
-#' @usage arv$api_clients.get(uuid)
+#' @usage arv$api_clients_get(uuid)
 #' @param uuid The UUID of the ApiClient in question.
 #' @return ApiClient object.
-#' @name api_clients.get
+#' @name api_clients_get
 NULL
 
-#' api_clients.create
+#' api_clients_create
 #'
-#' api_clients.create is a method defined in Arvados class.
+#' api_clients_create is a method defined in Arvados class.
 #'
-#' @usage arv$api_clients.create(apiclient,
+#' @usage arv$api_clients_create(apiclient,
 #' 	ensure_unique_name = "false", cluster_id = NULL)
 #' @param apiClient ApiClient object.
-#' @param ensure_unique_name Adjust name to ensure uniqueness instead of returning an error on (owner_uuid, name) collision.
+#' @param ensure_unique_name Adjust name to ensure uniqueness instead of returning an error on (owner_uuid, name) collision_
 #' @param cluster_id Create object on a remote federated cluster instead of the current one.
 #' @return ApiClient object.
-#' @name api_clients.create
+#' @name api_clients_create
 NULL
 
-#' api_clients.update
+#' api_clients_update
 #'
-#' api_clients.update is a method defined in Arvados class.
+#' api_clients_update is a method defined in Arvados class.
 #'
-#' @usage arv$api_clients.update(apiclient,
+#' @usage arv$api_clients_update(apiclient,
 #' 	uuid)
 #' @param apiClient ApiClient object.
 #' @param uuid The UUID of the ApiClient in question.
 #' @return ApiClient object.
-#' @name api_clients.update
+#' @name api_clients_update
 NULL
 
-#' api_clients.delete
+#' api_clients_delete
 #'
-#' api_clients.delete is a method defined in Arvados class.
+#' api_clients_delete is a method defined in Arvados class.
 #'
-#' @usage arv$api_clients.delete(uuid)
+#' @usage arv$api_clients_delete(uuid)
 #' @param uuid The UUID of the ApiClient in question.
 #' @return ApiClient object.
-#' @name api_clients.delete
+#' @name api_clients_delete
 NULL
 
-#' api_clients.list
+#' api_clients_list
 #'
-#' api_clients.list is a method defined in Arvados class.
+#' api_clients_list is a method defined in Arvados class.
 #'
-#' @usage arv$api_clients.list(filters = NULL,
+#' @usage arv$api_clients_list(filters = NULL,
 #' 	where = NULL, order = NULL, select = NULL,
 #' 	distinct = NULL, limit = "100", offset = "0",
 #' 	count = "exact", cluster_id = NULL, bypass_federation = NULL)
@@ -66,80 +66,80 @@ NULL
 #' @param cluster_id List objects on a remote federated cluster instead of the current one.
 #' @param bypass_federation bypass federation behavior, list items from local instance database only
 #' @return ApiClientList object.
-#' @name api_clients.list
+#' @name api_clients_list
 NULL
 
-#' api_client_authorizations.get
+#' api_client_authorizations_get
 #'
-#' api_client_authorizations.get is a method defined in Arvados class.
+#' api_client_authorizations_get is a method defined in Arvados class.
 #'
-#' @usage arv$api_client_authorizations.get(uuid)
+#' @usage arv$api_client_authorizations_get(uuid)
 #' @param uuid The UUID of the ApiClientAuthorization in question.
 #' @return ApiClientAuthorization object.
-#' @name api_client_authorizations.get
+#' @name api_client_authorizations_get
 NULL
 
-#' api_client_authorizations.create
+#' api_client_authorizations_create
 #'
-#' api_client_authorizations.create is a method defined in Arvados class.
+#' api_client_authorizations_create is a method defined in Arvados class.
 #'
-#' @usage arv$api_client_authorizations.create(apiclientauthorization,
+#' @usage arv$api_client_authorizations_create(apiclientauthorization,
 #' 	ensure_unique_name = "false", cluster_id = NULL)
 #' @param apiClientAuthorization ApiClientAuthorization object.
-#' @param ensure_unique_name Adjust name to ensure uniqueness instead of returning an error on (owner_uuid, name) collision.
+#' @param ensure_unique_name Adjust name to ensure uniqueness instead of returning an error on (owner_uuid, name) collision_
 #' @param cluster_id Create object on a remote federated cluster instead of the current one.
 #' @return ApiClientAuthorization object.
-#' @name api_client_authorizations.create
+#' @name api_client_authorizations_create
 NULL
 
-#' api_client_authorizations.update
+#' api_client_authorizations_update
 #'
-#' api_client_authorizations.update is a method defined in Arvados class.
+#' api_client_authorizations_update is a method defined in Arvados class.
 #'
-#' @usage arv$api_client_authorizations.update(apiclientauthorization,
+#' @usage arv$api_client_authorizations_update(apiclientauthorization,
 #' 	uuid)
 #' @param apiClientAuthorization ApiClientAuthorization object.
 #' @param uuid The UUID of the ApiClientAuthorization in question.
 #' @return ApiClientAuthorization object.
-#' @name api_client_authorizations.update
+#' @name api_client_authorizations_update
 NULL
 
-#' api_client_authorizations.delete
+#' api_client_authorizations_delete
 #'
-#' api_client_authorizations.delete is a method defined in Arvados class.
+#' api_client_authorizations_delete is a method defined in Arvados class.
 #'
-#' @usage arv$api_client_authorizations.delete(uuid)
+#' @usage arv$api_client_authorizations_delete(uuid)
 #' @param uuid The UUID of the ApiClientAuthorization in question.
 #' @return ApiClientAuthorization object.
-#' @name api_client_authorizations.delete
+#' @name api_client_authorizations_delete
 NULL
 
-#' api_client_authorizations.create_system_auth
+#' api_client_authorizations_create_system_auth
 #'
-#' api_client_authorizations.create_system_auth is a method defined in Arvados class.
+#' api_client_authorizations_create_system_auth is a method defined in Arvados class.
 #'
-#' @usage arv$api_client_authorizations.create_system_auth(api_client_id = NULL,
+#' @usage arv$api_client_authorizations_create_system_auth(api_client_id = NULL,
 #' 	scopes = NULL)
 #' @param api_client_id
 #' @param scopes
 #' @return ApiClientAuthorization object.
-#' @name api_client_authorizations.create_system_auth
+#' @name api_client_authorizations_create_system_auth
 NULL
 
-#' api_client_authorizations.current
+#' api_client_authorizations_current
 #'
-#' api_client_authorizations.current is a method defined in Arvados class.
+#' api_client_authorizations_current is a method defined in Arvados class.
 #'
-#' @usage arv$api_client_authorizations.current(NULL)
+#' @usage arv$api_client_authorizations_current(NULL)
 #' @return ApiClientAuthorization object.
-#' @name api_client_authorizations.current
+#' @name api_client_authorizations_current
 NULL
 
-#' api_client_authorizations.list
+#' api_client_authorizations_list
 #'
-#' api_client_authorizations.list is a method defined in Arvados class.
+#' api_client_authorizations_list is a method defined in Arvados class.
 #'
-#' @usage arv$api_client_authorizations.list(filters = NULL,
+#' @usage arv$api_client_authorizations_list(filters = NULL,
 #' 	where = NULL, order = NULL, select = NULL,
 #' 	distinct = NULL, limit = "100", offset = "0",
 #' 	count = "exact", cluster_id = NULL, bypass_federation = NULL)
@@ -154,59 +154,59 @@ NULL
 #' @param cluster_id List objects on a remote federated cluster instead of the current one.
 #' @param bypass_federation bypass federation behavior, list items from local instance database only
 #' @return ApiClientAuthorizationList object.
-#' @name api_client_authorizations.list
+#' @name api_client_authorizations_list
 NULL
 
-#' authorized_keys.get
+#' authorized_keys_get
 #'
-#' authorized_keys.get is a method defined in Arvados class.
+#' authorized_keys_get is a method defined in Arvados class.
 #'
-#' @usage arv$authorized_keys.get(uuid)
+#' @usage arv$authorized_keys_get(uuid)
 #' @param uuid The UUID of the AuthorizedKey in question.
 #' @return AuthorizedKey object.
-#' @name authorized_keys.get
+#' @name authorized_keys_get
 NULL
 
-#' authorized_keys.create
+#' authorized_keys_create
 #'
-#' authorized_keys.create is a method defined in Arvados class.
+#' authorized_keys_create is a method defined in Arvados class.
 #'
-#' @usage arv$authorized_keys.create(authorizedkey,
+#' @usage arv$authorized_keys_create(authorizedkey,
 #' 	ensure_unique_name = "false", cluster_id = NULL)
 #' @param authorizedKey AuthorizedKey object.
-#' @param ensure_unique_name Adjust name to ensure uniqueness instead of returning an error on (owner_uuid, name) collision.
+#' @param ensure_unique_name Adjust name to ensure uniqueness instead of returning an error on (owner_uuid, name) collision_
 #' @param cluster_id Create object on a remote federated cluster instead of the current one.
 #' @return AuthorizedKey object.
-#' @name authorized_keys.create
+#' @name authorized_keys_create
 NULL
 
-#' authorized_keys.update
+#' authorized_keys_update
 #'
-#' authorized_keys.update is a method defined in Arvados class.
+#' authorized_keys_update is a method defined in Arvados class.
 #'
-#' @usage arv$authorized_keys.update(authorizedkey,
+#' @usage arv$authorized_keys_update(authorizedkey,
 #' 	uuid)
 #' @param authorizedKey AuthorizedKey object.
 #' @param uuid The UUID of the AuthorizedKey in question.
 #' @return AuthorizedKey object.
-#' @name authorized_keys.update
+#' @name authorized_keys_update
 NULL
 
-#' authorized_keys.delete
+#' authorized_keys_delete
 #'
-#' authorized_keys.delete is a method defined in Arvados class.
+#' authorized_keys_delete is a method defined in Arvados class.
 #'
-#' @usage arv$authorized_keys.delete(uuid)
+#' @usage arv$authorized_keys_delete(uuid)
 #' @param uuid The UUID of the AuthorizedKey in question.
 #' @return AuthorizedKey object.
-#' @name authorized_keys.delete
+#' @name authorized_keys_delete
 NULL
 
-#' authorized_keys.list
+#' authorized_keys_list
 #'
-#' authorized_keys.list is a method defined in Arvados class.
+#' authorized_keys_list is a method defined in Arvados class.
 #'
-#' @usage arv$authorized_keys.list(filters = NULL,
+#' @usage arv$authorized_keys_list(filters = NULL,
 #' 	where = NULL, order = NULL, select = NULL,
 #' 	distinct = NULL, limit = "100", offset = "0",
 #' 	count = "exact", cluster_id = NULL, bypass_federation = NULL)
@@ -221,99 +221,102 @@ NULL
 #' @param cluster_id List objects on a remote federated cluster instead of the current one.
 #' @param bypass_federation bypass federation behavior, list items from local instance database only
 #' @return AuthorizedKeyList object.
-#' @name authorized_keys.list
+#' @name authorized_keys_list
 NULL
 
-#' collections.get
+#' collections_get
 #'
-#' collections.get is a method defined in Arvados class.
+#' collections_get is a method defined in Arvados class.
 #'
-#' @usage arv$collections.get(uuid)
+#' @usage arv$collections_get(uuid)
 #' @param uuid The UUID of the Collection in question.
 #' @return Collection object.
-#' @name collections.get
+#' @name collections_get
 NULL
 
-#' collections.create
+#' collections_create
 #'
-#' collections.create is a method defined in Arvados class.
+#' collections_create is a method defined in Arvados class that enables collections creation.
 #'
-#' @usage arv$collections.create(collection,
+#' @usage arv$collections_create(name, description, owner_uuid = NULL, properties = NULL,
 #' 	ensure_unique_name = "false", cluster_id = NULL)
-#' @param collection Collection object.
-#' @param ensure_unique_name Adjust name to ensure uniqueness instead of returning an error on (owner_uuid, name) collision.
+#' @param name Name of the collection
+#' @param description Description of the collection
+#' @param owner_uuid UUID of the maternal project to created one.
+#' @param properties Properties of the collection
+#' @param ensure_unique_name Adjust name to ensure uniqueness instead of returning an error on (owner_uuid, name) collision_
 #' @param cluster_id Create object on a remote federated cluster instead of the current one.
 #' @return Collection object.
-#' @name collections.create
+#' @name collections_create
 NULL
 
-#' collections.update
+#' collections_update
 #'
-#' collections.update is a method defined in Arvados class.
+#' collections_update is a method defined in Arvados class.
 #'
-#' @usage arv$collections.update(collection,
+#' @usage arv$collections_update(collection,
 #' 	uuid)
 #' @param collection Collection object.
 #' @param uuid The UUID of the Collection in question.
 #' @return Collection object.
-#' @name collections.update
+#' @name collections_update
 NULL
 
-#' collections.delete
+#' collections_delete
 #'
-#' collections.delete is a method defined in Arvados class.
+#' collections_delete is a method defined in Arvados class.
 #'
-#' @usage arv$collections.delete(uuid)
+#' @usage arv$collections_delete(uuid)
 #' @param uuid The UUID of the Collection in question.
 #' @return Collection object.
-#' @name collections.delete
+#' @name collections_delete
 NULL
 
-#' collections.provenance
+#' collections_provenance
 #'
-#' collections.provenance is a method defined in Arvados class.
+#' collections_provenance is a method defined in Arvados class.
 #'
-#' @usage arv$collections.provenance(uuid)
+#' @usage arv$collections_provenance(uuid)
 #' @param uuid
 #' @return Collection object.
-#' @name collections.provenance
+#' @name collections_provenance
 NULL
 
-#' collections.used_by
+#' collections_used_by
 #'
-#' collections.used_by is a method defined in Arvados class.
+#' collections_used_by is a method defined in Arvados class.
 #'
-#' @usage arv$collections.used_by(uuid)
+#' @usage arv$collections_used_by(uuid)
 #' @param uuid
 #' @return Collection object.
-#' @name collections.used_by
+#' @name collections_used_by
 NULL
 
-#' collections.trash
+#' collections_trash
 #'
-#' collections.trash is a method defined in Arvados class.
+#' collections_trash is a method defined in Arvados class.
 #'
-#' @usage arv$collections.trash(uuid)
+#' @usage arv$collections_trash(uuid)
 #' @param uuid
 #' @return Collection object.
-#' @name collections.trash
+#' @name collections_trash
 NULL
 
-#' collections.untrash
+#' collections_untrash
 #'
-#' collections.untrash is a method defined in Arvados class.
+#' collections_untrash is a method defined in Arvados class.
 #'
-#' @usage arv$collections.untrash(uuid)
+#' @usage arv$collections_untrash(uuid)
 #' @param uuid
 #' @return Collection object.
-#' @name collections.untrash
+#' @name collections_untrash
 NULL
 
-#' collections.list
+#' collections_list
 #'
-#' collections.list is a method defined in Arvados class.
+#' collections_list is a method defined in Arvados class.
 #'
-#' @usage arv$collections.list(filters = NULL,
+#' @usage arv$collections_list(filters = NULL,
 #' 	where = NULL, order = NULL, select = NULL,
 #' 	distinct = NULL, limit = "100", offset = "0",
 #' 	count = "exact", cluster_id = NULL, bypass_federation = NULL,
@@ -331,108 +334,108 @@ NULL
 #' @param include_trash Include collections whose is_trashed attribute is true.
 #' @param include_old_versions Include past collection versions.
 #' @return CollectionList object.
-#' @name collections.list
+#' @name collections_list
 NULL
 
-#' containers.get
+#' containers_get
 #'
-#' containers.get is a method defined in Arvados class.
+#' containers_get is a method defined in Arvados class.
 #'
-#' @usage arv$containers.get(uuid)
+#' @usage arv$containers_get(uuid)
 #' @param uuid The UUID of the Container in question.
 #' @return Container object.
-#' @name containers.get
+#' @name containers_get
 NULL
 
-#' containers.create
+#' containers_create
 #'
-#' containers.create is a method defined in Arvados class.
+#' containers_create is a method defined in Arvados class.
 #'
-#' @usage arv$containers.create(container,
+#' @usage arv$containers_create(container,
 #' 	ensure_unique_name = "false", cluster_id = NULL)
 #' @param container Container object.
-#' @param ensure_unique_name Adjust name to ensure uniqueness instead of returning an error on (owner_uuid, name) collision.
+#' @param ensure_unique_name Adjust name to ensure uniqueness instead of returning an error on (owner_uuid, name) collision_
 #' @param cluster_id Create object on a remote federated cluster instead of the current one.
 #' @return Container object.
-#' @name containers.create
+#' @name containers_create
 NULL
 
-#' containers.update
+#' containers_update
 #'
-#' containers.update is a method defined in Arvados class.
+#' containers_update is a method defined in Arvados class.
 #'
-#' @usage arv$containers.update(container,
+#' @usage arv$containers_update(container,
 #' 	uuid)
 #' @param container Container object.
 #' @param uuid The UUID of the Container in question.
 #' @return Container object.
-#' @name containers.update
+#' @name containers_update
 NULL
 
-#' containers.delete
+#' containers_delete
 #'
-#' containers.delete is a method defined in Arvados class.
+#' containers_delete is a method defined in Arvados class.
 #'
-#' @usage arv$containers.delete(uuid)
+#' @usage arv$containers_delete(uuid)
 #' @param uuid The UUID of the Container in question.
 #' @return Container object.
-#' @name containers.delete
+#' @name containers_delete
 NULL
 
-#' containers.auth
+#' containers_auth
 #'
-#' containers.auth is a method defined in Arvados class.
+#' containers_auth is a method defined in Arvados class.
 #'
-#' @usage arv$containers.auth(uuid)
+#' @usage arv$containers_auth(uuid)
 #' @param uuid
 #' @return Container object.
-#' @name containers.auth
+#' @name containers_auth
 NULL
 
-#' containers.lock
+#' containers_lock
 #'
-#' containers.lock is a method defined in Arvados class.
+#' containers_lock is a method defined in Arvados class.
 #'
-#' @usage arv$containers.lock(uuid)
+#' @usage arv$containers_lock(uuid)
 #' @param uuid
 #' @return Container object.
-#' @name containers.lock
+#' @name containers_lock
 NULL
 
-#' containers.unlock
+#' containers_unlock
 #'
-#' containers.unlock is a method defined in Arvados class.
+#' containers_unlock is a method defined in Arvados class.
 #'
-#' @usage arv$containers.unlock(uuid)
+#' @usage arv$containers_unlock(uuid)
 #' @param uuid
 #' @return Container object.
-#' @name containers.unlock
+#' @name containers_unlock
 NULL
 
-#' containers.secret_mounts
+#' containers_secret_mounts
 #'
-#' containers.secret_mounts is a method defined in Arvados class.
+#' containers_secret_mounts is a method defined in Arvados class.
 #'
-#' @usage arv$containers.secret_mounts(uuid)
+#' @usage arv$containers_secret_mounts(uuid)
 #' @param uuid
 #' @return Container object.
-#' @name containers.secret_mounts
+#' @name containers_secret_mounts
 NULL
 
-#' containers.current
+#' containers_current
 #'
-#' containers.current is a method defined in Arvados class.
+#' containers_current is a method defined in Arvados class.
 #'
-#' @usage arv$containers.current(NULL)
+#' @usage arv$containers_current(NULL)
 #' @return Container object.
-#' @name containers.current
+#' @name containers_current
 NULL
 
-#' containers.list
+#' containers_list
 #'
-#' containers.list is a method defined in Arvados class.
+#' containers_list is a method defined in Arvados class.
 #'
-#' @usage arv$containers.list(filters = NULL,
+#' @usage arv$containers_list(filters = NULL,
 #' 	where = NULL, order = NULL, select = NULL,
 #' 	distinct = NULL, limit = "100", offset = "0",
 #' 	count = "exact", cluster_id = NULL, bypass_federation = NULL)
@@ -447,59 +450,59 @@ NULL
 #' @param cluster_id List objects on a remote federated cluster instead of the current one.
 #' @param bypass_federation bypass federation behavior, list items from local instance database only
 #' @return ContainerList object.
-#' @name containers.list
+#' @name containers_list
 NULL
 
-#' container_requests.get
+#' container_requests_get
 #'
-#' container_requests.get is a method defined in Arvados class.
+#' container_requests_get is a method defined in Arvados class.
 #'
-#' @usage arv$container_requests.get(uuid)
+#' @usage arv$container_requests_get(uuid)
 #' @param uuid The UUID of the ContainerRequest in question.
 #' @return ContainerRequest object.
-#' @name container_requests.get
+#' @name container_requests_get
 NULL
 
-#' container_requests.create
+#' container_requests_create
 #'
-#' container_requests.create is a method defined in Arvados class.
+#' container_requests_create is a method defined in Arvados class.
 #'
-#' @usage arv$container_requests.create(containerrequest,
+#' @usage arv$container_requests_create(containerrequest,
 #' 	ensure_unique_name = "false", cluster_id = NULL)
 #' @param containerRequest ContainerRequest object.
-#' @param ensure_unique_name Adjust name to ensure uniqueness instead of returning an error on (owner_uuid, name) collision.
+#' @param ensure_unique_name Adjust name to ensure uniqueness instead of returning an error on (owner_uuid, name) collision_
 #' @param cluster_id Create object on a remote federated cluster instead of the current one.
 #' @return ContainerRequest object.
-#' @name container_requests.create
+#' @name container_requests_create
 NULL
 
-#' container_requests.update
+#' container_requests_update
 #'
-#' container_requests.update is a method defined in Arvados class.
+#' container_requests_update is a method defined in Arvados class.
 #'
-#' @usage arv$container_requests.update(containerrequest,
+#' @usage arv$container_requests_update(containerrequest,
 #' 	uuid)
 #' @param containerRequest ContainerRequest object.
 #' @param uuid The UUID of the ContainerRequest in question.
 #' @return ContainerRequest object.
-#' @name container_requests.update
+#' @name container_requests_update
 NULL
 
-#' container_requests.delete
+#' container_requests_delete
 #'
-#' container_requests.delete is a method defined in Arvados class.
+#' container_requests_delete is a method defined in Arvados class.
 #'
-#' @usage arv$container_requests.delete(uuid)
+#' @usage arv$container_requests_delete(uuid)
 #' @param uuid The UUID of the ContainerRequest in question.
 #' @return ContainerRequest object.
-#' @name container_requests.delete
+#' @name container_requests_delete
 NULL
 
-#' container_requests.list
+#' container_requests_list
 #'
-#' container_requests.list is a method defined in Arvados class.
+#' container_requests_list is a method defined in Arvados class.
 #'
-#' @usage arv$container_requests.list(filters = NULL,
+#' @usage arv$container_requests_list(filters = NULL,
 #' 	where = NULL, order = NULL, select = NULL,
 #' 	distinct = NULL, limit = "100", offset = "0",
 #' 	count = "exact", cluster_id = NULL, bypass_federation = NULL,
@@ -516,61 +519,61 @@ NULL
 #' @param bypass_federation bypass federation behavior, list items from local instance database only
 #' @param include_trash Include container requests whose owner project is trashed.
 #' @return ContainerRequestList object.
-#' @name container_requests.list
+#' @name container_requests_list
 NULL
 
-#' groups.get
+#' groups_get
 #'
-#' groups.get is a method defined in Arvados class.
+#' groups_get is a method defined in Arvados class.
 #'
-#' @usage arv$groups.get(uuid)
+#' @usage arv$groups_get(uuid)
 #' @param uuid The UUID of the Group in question.
 #' @return Group object.
-#' @name groups.get
+#' @name groups_get
 NULL
 
-#' groups.create
+#' groups_create
 #'
-#' groups.create is a method defined in Arvados class.
+#' groups_create is a method defined in Arvados class that supports project creation.
 #'
-#' @usage arv$groups.create(group, ensure_unique_name = "false",
+#' @usage arv$groups_create(group, ensure_unique_name = "false",
 #' 	cluster_id = NULL, async = "false")
 #' @param group Group object.
-#' @param ensure_unique_name Adjust name to ensure uniqueness instead of returning an error on (owner_uuid, name) collision.
+#' @param ensure_unique_name Adjust name to ensure uniqueness instead of returning an error on (owner_uuid, name) collision_
 #' @param cluster_id Create object on a remote federated cluster instead of the current one.
-#' @param async defer permissions update
+#' @param async Defer permissions update.
 #' @return Group object.
-#' @name groups.create
+#' @name groups_create
 NULL
 
-#' groups.update
+#' groups_update
 #'
-#' groups.update is a method defined in Arvados class.
+#' groups_update is a method defined in Arvados class.
 #'
-#' @usage arv$groups.update(group, uuid,
+#' @usage arv$groups_update(group, uuid,
 #' 	async = "false")
 #' @param group Group object.
 #' @param uuid The UUID of the Group in question.
 #' @param async defer permissions update
 #' @return Group object.
-#' @name groups.update
+#' @name groups_update
 NULL
 
-#' groups.delete
+#' groups_delete
 #'
-#' groups.delete is a method defined in Arvados class.
+#' groups_delete is a method defined in Arvados class.
 #'
-#' @usage arv$groups.delete(uuid)
+#' @usage arv$groups_delete(uuid)
 #' @param uuid The UUID of the Group in question.
 #' @return Group object.
-#' @name groups.delete
+#' @name groups_delete
 NULL
 
-#' groups.contents
+#' groups_contents
 #'
-#' groups.contents is a method defined in Arvados class.
+#' groups_contents is a method defined in Arvados class.
 #'
-#' @usage arv$groups.contents(filters = NULL,
+#' @usage arv$groups_contents(filters = NULL,
 #' 	where = NULL, order = NULL, distinct = NULL,
 #' 	limit = "100", offset = "0", count = "exact",
 #' 	cluster_id = NULL, bypass_federation = NULL,
@@ -590,14 +593,14 @@ NULL
 #' @param recursive Include contents from child groups recursively.
 #' @param include Include objects referred to by listed field in "included" (only owner_uuid)
 #' @return Group object.
-#' @name groups.contents
+#' @name groups_contents
 NULL
 
-#' groups.shared
+#' groups_shared
 #'
-#' groups.shared is a method defined in Arvados class.
+#' groups_shared is a method defined in Arvados class.
 #'
-#' @usage arv$groups.shared(filters = NULL,
+#' @usage arv$groups_shared(filters = NULL,
 #' 	where = NULL, order = NULL, select = NULL,
 #' 	distinct = NULL, limit = "100", offset = "0",
 #' 	count = "exact", cluster_id = NULL, bypass_federation = NULL,
@@ -615,34 +618,34 @@ NULL
 #' @param include_trash Include items whose is_trashed attribute is true.
 #' @param include
 #' @return Group object.
-#' @name groups.shared
+#' @name groups_shared
 NULL
 
-#' groups.trash
+#' groups_trash
 #'
-#' groups.trash is a method defined in Arvados class.
+#' groups_trash is a method defined in Arvados class.
 #'
-#' @usage arv$groups.trash(uuid)
+#' @usage arv$groups_trash(uuid)
 #' @param uuid
 #' @return Group object.
-#' @name groups.trash
+#' @name groups_trash
 NULL
 
-#' groups.untrash
+#' groups_untrash
 #'
-#' groups.untrash is a method defined in Arvados class.
+#' groups_untrash is a method defined in Arvados class.
 #'
-#' @usage arv$groups.untrash(uuid)
+#' @usage arv$groups_untrash(uuid)
 #' @param uuid
 #' @return Group object.
-#' @name groups.untrash
+#' @name groups_untrash
 NULL
 
-#' groups.list
+#' groups_list
 #'
-#' groups.list is a method defined in Arvados class.
+#' groups_list is a method defined in Arvados class.
 #'
-#' @usage arv$groups.list(filters = NULL,
+#' @usage arv$groups_list(filters = NULL,
 #' 	where = NULL, order = NULL, select = NULL,
 #' 	distinct = NULL, limit = "100", offset = "0",
 #' 	count = "exact", cluster_id = NULL, bypass_federation = NULL,
@@ -659,68 +662,68 @@ NULL
 #' @param bypass_federation bypass federation behavior, list items from local instance database only
 #' @param include_trash Include items whose is_trashed attribute is true.
 #' @return GroupList object.
-#' @name groups.list
+#' @name groups_list
 NULL
 
-#' keep_services.get
+#' keep_services_get
 #'
-#' keep_services.get is a method defined in Arvados class.
+#' keep_services_get is a method defined in Arvados class.
 #'
-#' @usage arv$keep_services.get(uuid)
+#' @usage arv$keep_services_get(uuid)
 #' @param uuid The UUID of the KeepService in question.
 #' @return KeepService object.
-#' @name keep_services.get
+#' @name keep_services_get
 NULL
 
-#' keep_services.create
+#' keep_services_create
 #'
-#' keep_services.create is a method defined in Arvados class.
+#' keep_services_create is a method defined in Arvados class.
 #'
-#' @usage arv$keep_services.create(keepservice,
+#' @usage arv$keep_services_create(keepservice,
 #' 	ensure_unique_name = "false", cluster_id = NULL)
 #' @param keepService KeepService object.
-#' @param ensure_unique_name Adjust name to ensure uniqueness instead of returning an error on (owner_uuid, name) collision.
+#' @param ensure_unique_name Adjust name to ensure uniqueness instead of returning an error on (owner_uuid, name) collision_
 #' @param cluster_id Create object on a remote federated cluster instead of the current one.
 #' @return KeepService object.
-#' @name keep_services.create
+#' @name keep_services_create
 NULL
 
-#' keep_services.update
+#' keep_services_update
 #'
-#' keep_services.update is a method defined in Arvados class.
+#' keep_services_update is a method defined in Arvados class.
 #'
-#' @usage arv$keep_services.update(keepservice,
+#' @usage arv$keep_services_update(keepservice,
 #' 	uuid)
 #' @param keepService KeepService object.
 #' @param uuid The UUID of the KeepService in question.
 #' @return KeepService object.
-#' @name keep_services.update
+#' @name keep_services_update
 NULL
 
-#' keep_services.delete
+#' keep_services_delete
 #'
-#' keep_services.delete is a method defined in Arvados class.
+#' keep_services_delete is a method defined in Arvados class.
 #'
-#' @usage arv$keep_services.delete(uuid)
+#' @usage arv$keep_services_delete(uuid)
 #' @param uuid The UUID of the KeepService in question.
 #' @return KeepService object.
-#' @name keep_services.delete
+#' @name keep_services_delete
 NULL
 
-#' keep_services.accessible
+#' keep_services_accessible
 #'
-#' keep_services.accessible is a method defined in Arvados class.
+#' keep_services_accessible is a method defined in Arvados class.
 #'
-#' @usage arv$keep_services.accessible(NULL)
+#' @usage arv$keep_services_accessible(NULL)
 #' @return KeepService object.
-#' @name keep_services.accessible
+#' @name keep_services_accessible
 NULL
 
-#' keep_services.list
+#' keep_services_list
 #'
-#' keep_services.list is a method defined in Arvados class.
+#' keep_services_list is a method defined in Arvados class.
 #'
-#' @usage arv$keep_services.list(filters = NULL,
+#' @usage arv$keep_services_list(filters = NULL,
 #' 	where = NULL, order = NULL, select = NULL,
 #' 	distinct = NULL, limit = "100", offset = "0",
 #' 	count = "exact", cluster_id = NULL, bypass_federation = NULL)
@@ -735,58 +738,107 @@ NULL
 #' @param cluster_id List objects on a remote federated cluster instead of the current one.
 #' @param bypass_federation bypass federation behavior, list items from local instance database only
 #' @return KeepServiceList object.
-#' @name keep_services.list
+#' @name keep_services_list
 NULL
 
-#' links.get
+#' projects_permission_give
 #'
-#' links.get is a method defined in Arvados class.
+#' projects_permission_give is a method defined in Arvados class that enables sharing files with another users_
 #'
-#' @usage arv$links.get(uuid)
+#' @usage arv$projects_permission_give(type, object, user)
+#' @param type Possible options are can_read / can_write / can_manage.
+#' @param object A uuid of a project / file.
+#' @param user A uuid of the person that gets the permission_
+#' @return Granted permissions.
+#' @name projects_permission_give
+NULL
+
+#' projects_permission_refuse
+#'
+#' projects_permission_refuse is a method defined in Arvados class that unables sharing files with another users_
+#'
+#' @usage arv$projects_permission_refuse(type, object, user)
+#' @param type Possible options are can_read / can_write / can_manage.
+#' @param object A uuid of a project / file.
+#' @param user A uuid of a person that permissions are taken from.
+#' @return Refused permissions.
+#' @name projects_permission_refuse
+NULL
+
+#' projects_permission_update
+#'
+#' projects_permission_update is a method defined in Arvados class that enables updating permissions.
+#'
+#' @usage arv$projects_permission_update(type_new, type_old, object, user)
+#' @param type_new New option like can_read / can_write / can_manage.
+#' @param type_old Old option
+#' @param uuid_file A uuid of a project / file.
+#' @param uuid_person A uuid of the person that the permission is being updated.
+#' @return Updated permissions.
+#' @name projects_permission_update
+NULL
+
+#' projects_permission_check
+#'
+#' projects_permission_check is a method defined in Arvados class that enables checking file permissions.
+#'
+#' @usage arv$projects_permission_check(object, user, type = NULL)
+#' @param uuid_file A uuid of a project / file.
+#' @param uuid_person A uuid of the person that the permission is being updated.
+#' @param type Possible options are can_read / can_write / can_manage.
+#' @return Link object.
+#' @name projects_permission_check
+NULL
+
+#' links_get
+#'
+#' links_get is a method defined in Arvados class.
+#'
+#' @usage arv$links_get(uuid)
 #' @param uuid The UUID of the Link in question.
 #' @return Link object.
-#' @name links.get
+#' @name links_get
 NULL
 
-#' links.create
+#' links_create
 #'
-#' links.create is a method defined in Arvados class.
+#' links_create is a method defined in Arvados class.
 #'
-#' @usage arv$links.create(link, ensure_unique_name = "false",
+#' @usage arv$links_create(link, ensure_unique_name = "false",
 #' 	cluster_id = NULL)
 #' @param link Link object.
-#' @param ensure_unique_name Adjust name to ensure uniqueness instead of returning an error on (owner_uuid, name) collision.
+#' @param ensure_unique_name Adjust name to ensure uniqueness instead of returning an error on (owner_uuid, name) collision_
 #' @param cluster_id Create object on a remote federated cluster instead of the current one.
 #' @return Link object.
-#' @name links.create
+#' @name links_create
 NULL
 
-#' links.update
+#' links_update
 #'
-#' links.update is a method defined in Arvados class.
+#' links_update is a method defined in Arvados class.
 #'
-#' @usage arv$links.update(link, uuid)
+#' @usage arv$links_update(link, uuid)
 #' @param link Link object.
 #' @param uuid The UUID of the Link in question.
 #' @return Link object.
-#' @name links.update
+#' @name links_update
 NULL
 
-#' links.delete
+#' links_delete
 #'
-#' links.delete is a method defined in Arvados class.
+#' links_delete is a method defined in Arvados class.
 #'
-#' @usage arv$links.delete(uuid)
+#' @usage arv$links_delete(uuid)
 #' @param uuid The UUID of the Link in question.
 #' @return Link object.
-#' @name links.delete
+#' @name links_delete
 NULL
 
-#' links.list
+#' links_list
 #'
-#' links.list is a method defined in Arvados class.
+#' links_list is a method defined in Arvados class.
 #'
-#' @usage arv$links.list(filters = NULL,
+#' @usage arv$links_list(filters = NULL,
 #' 	where = NULL, order = NULL, select = NULL,
 #' 	distinct = NULL, limit = "100", offset = "0",
 #' 	count = "exact", cluster_id = NULL, bypass_federation = NULL)
@@ -801,68 +853,68 @@ NULL
 #' @param cluster_id List objects on a remote federated cluster instead of the current one.
 #' @param bypass_federation bypass federation behavior, list items from local instance database only
 #' @return LinkList object.
-#' @name links.list
+#' @name links_list
 NULL
 
-#' links.get_permissions
+#' links_get_permissions
 #'
-#' links.get_permissions is a method defined in Arvados class.
+#' links_get_permissions is a method defined in Arvados class.
 #'
-#' @usage arv$links.get_permissions(uuid)
+#' @usage arv$links_get_permissions(uuid)
 #' @param uuid
 #' @return Link object.
-#' @name links.get_permissions
+#' @name links_get_permissions
 NULL
 
-#' logs.get
+#' logs_get
 #'
-#' logs.get is a method defined in Arvados class.
+#' logs_get is a method defined in Arvados class.
 #'
-#' @usage arv$logs.get(uuid)
+#' @usage arv$logs_get(uuid)
 #' @param uuid The UUID of the Log in question.
 #' @return Log object.
-#' @name logs.get
+#' @name logs_get
 NULL
 
-#' logs.create
+#' logs_create
 #'
-#' logs.create is a method defined in Arvados class.
+#' logs_create is a method defined in Arvados class.
 #'
-#' @usage arv$logs.create(log, ensure_unique_name = "false",
+#' @usage arv$logs_create(log, ensure_unique_name = "false",
 #' 	cluster_id = NULL)
 #' @param log Log object.
-#' @param ensure_unique_name Adjust name to ensure uniqueness instead of returning an error on (owner_uuid, name) collision.
+#' @param ensure_unique_name Adjust name to ensure uniqueness instead of returning an error on (owner_uuid, name) collision_
 #' @param cluster_id Create object on a remote federated cluster instead of the current one.
 #' @return Log object.
-#' @name logs.create
+#' @name logs_create
 NULL
 
-#' logs.update
+#' logs_update
 #'
-#' logs.update is a method defined in Arvados class.
+#' logs_update is a method defined in Arvados class.
 #'
-#' @usage arv$logs.update(log, uuid)
+#' @usage arv$logs_update(log, uuid)
 #' @param log Log object.
 #' @param uuid The UUID of the Log in question.
 #' @return Log object.
-#' @name logs.update
+#' @name logs_update
 NULL
 
-#' logs.delete
+#' logs_delete
 #'
-#' logs.delete is a method defined in Arvados class.
+#' logs_delete is a method defined in Arvados class.
 #'
-#' @usage arv$logs.delete(uuid)
+#' @usage arv$logs_delete(uuid)
 #' @param uuid The UUID of the Log in question.
 #' @return Log object.
-#' @name logs.delete
+#' @name logs_delete
 NULL
 
-#' logs.list
+#' logs_list
 #'
-#' logs.list is a method defined in Arvados class.
+#' logs_list is a method defined in Arvados class.
 #'
-#' @usage arv$logs.list(filters = NULL, where = NULL,
+#' @usage arv$logs_list(filters = NULL, where = NULL,
 #' 	order = NULL, select = NULL, distinct = NULL,
 #' 	limit = "100", offset = "0", count = "exact",
 #' 	cluster_id = NULL, bypass_federation = NULL)
@@ -877,87 +929,87 @@ NULL
 #' @param cluster_id List objects on a remote federated cluster instead of the current one.
 #' @param bypass_federation bypass federation behavior, list items from local instance database only
 #' @return LogList object.
-#' @name logs.list
+#' @name logs_list
 NULL
 
-#' users.get
+#' users_get
 #'
-#' users.get is a method defined in Arvados class.
+#' users_get is a method defined in Arvados class.
 #'
-#' @usage arv$users.get(uuid)
+#' @usage arv$users_get(uuid)
 #' @param uuid The UUID of the User in question.
 #' @return User object.
-#' @name users.get
+#' @name users_get
 NULL
 
-#' users.create
+#' users_create
 #'
-#' users.create is a method defined in Arvados class.
+#' users_create is a method defined in Arvados class.
 #'
-#' @usage arv$users.create(user, ensure_unique_name = "false",
+#' @usage arv$users_create(user, ensure_unique_name = "false",
 #' 	cluster_id = NULL)
 #' @param user User object.
-#' @param ensure_unique_name Adjust name to ensure uniqueness instead of returning an error on (owner_uuid, name) collision.
+#' @param ensure_unique_name Adjust name to ensure uniqueness instead of returning an error on (owner_uuid, name) collision_
 #' @param cluster_id Create object on a remote federated cluster instead of the current one.
 #' @return User object.
-#' @name users.create
+#' @name users_create
 NULL
 
-#' users.update
+#' users_update
 #'
-#' users.update is a method defined in Arvados class.
+#' users_update is a method defined in Arvados class.
 #'
-#' @usage arv$users.update(user, uuid, bypass_federation = NULL)
+#' @usage arv$users_update(user, uuid, bypass_federation = NULL)
 #' @param user User object.
 #' @param uuid The UUID of the User in question.
 #' @param bypass_federation
 #' @return User object.
-#' @name users.update
+#' @name users_update
 NULL
 
-#' users.delete
+#' users_delete
 #'
-#' users.delete is a method defined in Arvados class.
+#' users_delete is a method defined in Arvados class.
 #'
-#' @usage arv$users.delete(uuid)
+#' @usage arv$users_delete(uuid)
 #' @param uuid The UUID of the User in question.
 #' @return User object.
-#' @name users.delete
+#' @name users_delete
 NULL
 
-#' users.current
+#' users_current
 #'
-#' users.current is a method defined in Arvados class.
+#' users_current is a method defined in Arvados class.
 #'
-#' @usage arv$users.current(NULL)
+#' @usage arv$users_current(NULL)
 #' @return User object.
-#' @name users.current
+#' @name users_current
 NULL
 
-#' users.system
+#' users_system
 #'
-#' users.system is a method defined in Arvados class.
+#' users_system is a method defined in Arvados class.
 #'
-#' @usage arv$users.system(NULL)
+#' @usage arv$users_system(NULL)
 #' @return User object.
-#' @name users.system
+#' @name users_system
 NULL
 
-#' users.activate
+#' users_activate
 #'
-#' users.activate is a method defined in Arvados class.
+#' users_activate is a method defined in Arvados class.
 #'
-#' @usage arv$users.activate(uuid)
+#' @usage arv$users_activate(uuid)
 #' @param uuid
 #' @return User object.
-#' @name users.activate
+#' @name users_activate
 NULL
 
-#' users.setup
+#' users_setup
 #'
-#' users.setup is a method defined in Arvados class.
+#' users_setup is a method defined in Arvados class.
 #'
-#' @usage arv$users.setup(uuid = NULL, user = NULL,
+#' @usage arv$users_setup(uuid = NULL, user = NULL,
 #' 	repo_name = NULL, vm_uuid = NULL, send_notification_email = "false")
 #' @param uuid
 #' @param user
@@ -965,24 +1017,24 @@ NULL
 #' @param vm_uuid
 #' @param send_notification_email
 #' @return User object.
-#' @name users.setup
+#' @name users_setup
 NULL
 
-#' users.unsetup
+#' users_unsetup
 #'
-#' users.unsetup is a method defined in Arvados class.
+#' users_unsetup is a method defined in Arvados class.
 #'
-#' @usage arv$users.unsetup(uuid)
+#' @usage arv$users_unsetup(uuid)
 #' @param uuid
 #' @return User object.
-#' @name users.unsetup
+#' @name users_unsetup
 NULL
 
-#' users.merge
+#' users_merge
 #'
-#' users.merge is a method defined in Arvados class.
+#' users_merge is a method defined in Arvados class.
 #'
-#' @usage arv$users.merge(new_owner_uuid,
+#' @usage arv$users_merge(new_owner_uuid,
 #' 	new_user_token = NULL, redirect_to_new_user = NULL,
 #' 	old_user_uuid = NULL, new_user_uuid = NULL)
 #' @param new_owner_uuid
@@ -991,14 +1043,14 @@ NULL
 #' @param old_user_uuid
 #' @param new_user_uuid
 #' @return User object.
-#' @name users.merge
+#' @name users_merge
 NULL
 
-#' users.list
+#' users_list
 #'
-#' users.list is a method defined in Arvados class.
+#' users_list is a method defined in Arvados class.
 #'
-#' @usage arv$users.list(filters = NULL,
+#' @usage arv$users_list(filters = NULL,
 #' 	where = NULL, order = NULL, select = NULL,
 #' 	distinct = NULL, limit = "100", offset = "0",
 #' 	count = "exact", cluster_id = NULL, bypass_federation = NULL)
@@ -1013,68 +1065,68 @@ NULL
 #' @param cluster_id List objects on a remote federated cluster instead of the current one.
 #' @param bypass_federation bypass federation behavior, list items from local instance database only
 #' @return UserList object.
-#' @name users.list
+#' @name users_list
 NULL
 
-#' repositories.get
+#' repositories_get
 #'
-#' repositories.get is a method defined in Arvados class.
+#' repositories_get is a method defined in Arvados class.
 #'
-#' @usage arv$repositories.get(uuid)
+#' @usage arv$repositories_get(uuid)
 #' @param uuid The UUID of the Repository in question.
 #' @return Repository object.
-#' @name repositories.get
+#' @name repositories_get
 NULL
 
-#' repositories.create
+#' repositories_create
 #'
-#' repositories.create is a method defined in Arvados class.
+#' repositories_create is a method defined in Arvados class.
 #'
-#' @usage arv$repositories.create(repository,
+#' @usage arv$repositories_create(repository,
 #' 	ensure_unique_name = "false", cluster_id = NULL)
 #' @param repository Repository object.
-#' @param ensure_unique_name Adjust name to ensure uniqueness instead of returning an error on (owner_uuid, name) collision.
+#' @param ensure_unique_name Adjust name to ensure uniqueness instead of returning an error on (owner_uuid, name) collision_
 #' @param cluster_id Create object on a remote federated cluster instead of the current one.
 #' @return Repository object.
-#' @name repositories.create
+#' @name repositories_create
 NULL
 
-#' repositories.update
+#' repositories_update
 #'
-#' repositories.update is a method defined in Arvados class.
+#' repositories_update is a method defined in Arvados class.
 #'
-#' @usage arv$repositories.update(repository,
+#' @usage arv$repositories_update(repository,
 #' 	uuid)
 #' @param repository Repository object.
 #' @param uuid The UUID of the Repository in question.
 #' @return Repository object.
-#' @name repositories.update
+#' @name repositories_update
 NULL
 
-#' repositories.delete
+#' repositories_delete
 #'
-#' repositories.delete is a method defined in Arvados class.
+#' repositories_delete is a method defined in Arvados class.
 #'
-#' @usage arv$repositories.delete(uuid)
+#' @usage arv$repositories_delete(uuid)
 #' @param uuid The UUID of the Repository in question.
 #' @return Repository object.
-#' @name repositories.delete
+#' @name repositories_delete
 NULL
 
-#' repositories.get_all_permissions
+#' repositories_get_all_permissions
 #'
-#' repositories.get_all_permissions is a method defined in Arvados class.
+#' repositories_get_all_permissions is a method defined in Arvados class.
 #'
-#' @usage arv$repositories.get_all_permissions(NULL)
+#' @usage arv$repositories_get_all_permissions(NULL)
 #' @return Repository object.
-#' @name repositories.get_all_permissions
+#' @name repositories_get_all_permissions
 NULL
 
-#' repositories.list
+#' repositories_list
 #'
-#' repositories.list is a method defined in Arvados class.
+#' repositories_list is a method defined in Arvados class.
 #'
-#' @usage arv$repositories.list(filters = NULL,
+#' @usage arv$repositories_list(filters = NULL,
 #' 	where = NULL, order = NULL, select = NULL,
 #' 	distinct = NULL, limit = "100", offset = "0",
 #' 	count = "exact", cluster_id = NULL, bypass_federation = NULL)
@@ -1089,78 +1141,78 @@ NULL
 #' @param cluster_id List objects on a remote federated cluster instead of the current one.
 #' @param bypass_federation bypass federation behavior, list items from local instance database only
 #' @return RepositoryList object.
-#' @name repositories.list
+#' @name repositories_list
 NULL
 
-#' virtual_machines.get
+#' virtual_machines_get
 #'
-#' virtual_machines.get is a method defined in Arvados class.
+#' virtual_machines_get is a method defined in Arvados class.
 #'
-#' @usage arv$virtual_machines.get(uuid)
+#' @usage arv$virtual_machines_get(uuid)
 #' @param uuid The UUID of the VirtualMachine in question.
 #' @return VirtualMachine object.
-#' @name virtual_machines.get
+#' @name virtual_machines_get
 NULL
 
-#' virtual_machines.create
+#' virtual_machines_create
 #'
-#' virtual_machines.create is a method defined in Arvados class.
+#' virtual_machines_create is a method defined in Arvados class.
 #'
-#' @usage arv$virtual_machines.create(virtualmachine,
+#' @usage arv$virtual_machines_create(virtualmachine,
 #' 	ensure_unique_name = "false", cluster_id = NULL)
 #' @param virtualMachine VirtualMachine object.
-#' @param ensure_unique_name Adjust name to ensure uniqueness instead of returning an error on (owner_uuid, name) collision.
+#' @param ensure_unique_name Adjust name to ensure uniqueness instead of returning an error on (owner_uuid, name) collision_
 #' @param cluster_id Create object on a remote federated cluster instead of the current one.
 #' @return VirtualMachine object.
-#' @name virtual_machines.create
+#' @name virtual_machines_create
 NULL
 
-#' virtual_machines.update
+#' virtual_machines_update
 #'
-#' virtual_machines.update is a method defined in Arvados class.
+#' virtual_machines_update is a method defined in Arvados class.
 #'
-#' @usage arv$virtual_machines.update(virtualmachine,
+#' @usage arv$virtual_machines_update(virtualmachine,
 #' 	uuid)
 #' @param virtualMachine VirtualMachine object.
 #' @param uuid The UUID of the VirtualMachine in question.
 #' @return VirtualMachine object.
-#' @name virtual_machines.update
+#' @name virtual_machines_update
 NULL
 
-#' virtual_machines.delete
+#' virtual_machines_delete
 #'
-#' virtual_machines.delete is a method defined in Arvados class.
+#' virtual_machines_delete is a method defined in Arvados class.
 #'
-#' @usage arv$virtual_machines.delete(uuid)
+#' @usage arv$virtual_machines_delete(uuid)
 #' @param uuid The UUID of the VirtualMachine in question.
 #' @return VirtualMachine object.
-#' @name virtual_machines.delete
+#' @name virtual_machines_delete
 NULL
 
-#' virtual_machines.logins
+#' virtual_machines_logins
 #'
-#' virtual_machines.logins is a method defined in Arvados class.
+#' virtual_machines_logins is a method defined in Arvados class.
 #'
-#' @usage arv$virtual_machines.logins(uuid)
+#' @usage arv$virtual_machines_logins(uuid)
 #' @param uuid
 #' @return VirtualMachine object.
-#' @name virtual_machines.logins
+#' @name virtual_machines_logins
 NULL
 
-#' virtual_machines.get_all_logins
+#' virtual_machines_get_all_logins
 #'
-#' virtual_machines.get_all_logins is a method defined in Arvados class.
+#' virtual_machines_get_all_logins is a method defined in Arvados class.
 #'
-#' @usage arv$virtual_machines.get_all_logins(NULL)
+#' @usage arv$virtual_machines_get_all_logins(NULL)
 #' @return VirtualMachine object.
-#' @name virtual_machines.get_all_logins
+#' @name virtual_machines_get_all_logins
 NULL
 
-#' virtual_machines.list
+#' virtual_machines_list
 #'
-#' virtual_machines.list is a method defined in Arvados class.
+#' virtual_machines_list is a method defined in Arvados class.
 #'
-#' @usage arv$virtual_machines.list(filters = NULL,
+#' @usage arv$virtual_machines_list(filters = NULL,
 #' 	where = NULL, order = NULL, select = NULL,
 #' 	distinct = NULL, limit = "100", offset = "0",
 #' 	count = "exact", cluster_id = NULL, bypass_federation = NULL)
@@ -1175,59 +1227,59 @@ NULL
 #' @param cluster_id List objects on a remote federated cluster instead of the current one.
 #' @param bypass_federation bypass federation behavior, list items from local instance database only
 #' @return VirtualMachineList object.
-#' @name virtual_machines.list
+#' @name virtual_machines_list
 NULL
 
-#' workflows.get
+#' workflows_get
 #'
-#' workflows.get is a method defined in Arvados class.
+#' workflows_get is a method defined in Arvados class.
 #'
-#' @usage arv$workflows.get(uuid)
+#' @usage arv$workflows_get(uuid)
 #' @param uuid The UUID of the Workflow in question.
 #' @return Workflow object.
-#' @name workflows.get
+#' @name workflows_get
 NULL
 
-#' workflows.create
+#' workflows_create
 #'
-#' workflows.create is a method defined in Arvados class.
+#' workflows_create is a method defined in Arvados class.
 #'
-#' @usage arv$workflows.create(workflow,
+#' @usage arv$workflows_create(workflow,
 #' 	ensure_unique_name = "false", cluster_id = NULL)
 #' @param workflow Workflow object.
-#' @param ensure_unique_name Adjust name to ensure uniqueness instead of returning an error on (owner_uuid, name) collision.
+#' @param ensure_unique_name Adjust name to ensure uniqueness instead of returning an error on (owner_uuid, name) collision_
 #' @param cluster_id Create object on a remote federated cluster instead of the current one.
 #' @return Workflow object.
-#' @name workflows.create
+#' @name workflows_create
 NULL
 
-#' workflows.update
+#' workflows_update
 #'
-#' workflows.update is a method defined in Arvados class.
+#' workflows_update is a method defined in Arvados class.
 #'
-#' @usage arv$workflows.update(workflow,
+#' @usage arv$workflows_update(workflow,
 #' 	uuid)
 #' @param workflow Workflow object.
 #' @param uuid The UUID of the Workflow in question.
 #' @return Workflow object.
-#' @name workflows.update
+#' @name workflows_update
 NULL
 
-#' workflows.delete
+#' workflows_delete
 #'
-#' workflows.delete is a method defined in Arvados class.
+#' workflows_delete is a method defined in Arvados class.
 #'
-#' @usage arv$workflows.delete(uuid)
+#' @usage arv$workflows_delete(uuid)
 #' @param uuid The UUID of the Workflow in question.
 #' @return Workflow object.
-#' @name workflows.delete
+#' @name workflows_delete
 NULL
 
-#' workflows.list
+#' workflows_list
 #'
-#' workflows.list is a method defined in Arvados class.
+#' workflows_list is a method defined in Arvados class.
 #'
-#' @usage arv$workflows.list(filters = NULL,
+#' @usage arv$workflows_list(filters = NULL,
 #' 	where = NULL, order = NULL, select = NULL,
 #' 	distinct = NULL, limit = "100", offset = "0",
 #' 	count = "exact", cluster_id = NULL, bypass_federation = NULL)
@@ -1242,77 +1294,77 @@ NULL
 #' @param cluster_id List objects on a remote federated cluster instead of the current one.
 #' @param bypass_federation bypass federation behavior, list items from local instance database only
 #' @return WorkflowList object.
-#' @name workflows.list
+#' @name workflows_list
 NULL
 
-#' user_agreements.get
+#' user_agreements_get
 #'
-#' user_agreements.get is a method defined in Arvados class.
+#' user_agreements_get is a method defined in Arvados class.
 #'
-#' @usage arv$user_agreements.get(uuid)
+#' @usage arv$user_agreements_get(uuid)
 #' @param uuid The UUID of the UserAgreement in question.
 #' @return UserAgreement object.
-#' @name user_agreements.get
+#' @name user_agreements_get
 NULL
 
-#' user_agreements.create
+#' user_agreements_create
 #'
-#' user_agreements.create is a method defined in Arvados class.
+#' user_agreements_create is a method defined in Arvados class.
 #'
-#' @usage arv$user_agreements.create(useragreement,
+#' @usage arv$user_agreements_create(useragreement,
 #' 	ensure_unique_name = "false", cluster_id = NULL)
 #' @param userAgreement UserAgreement object.
-#' @param ensure_unique_name Adjust name to ensure uniqueness instead of returning an error on (owner_uuid, name) collision.
+#' @param ensure_unique_name Adjust name to ensure uniqueness instead of returning an error on (owner_uuid, name) collision_
 #' @param cluster_id Create object on a remote federated cluster instead of the current one.
 #' @return UserAgreement object.
-#' @name user_agreements.create
+#' @name user_agreements_create
 NULL
 
-#' user_agreements.update
+#' user_agreements_update
 #'
-#' user_agreements.update is a method defined in Arvados class.
+#' user_agreements_update is a method defined in Arvados class.
 #'
-#' @usage arv$user_agreements.update(useragreement,
+#' @usage arv$user_agreements_update(useragreement,
 #' 	uuid)
 #' @param userAgreement UserAgreement object.
 #' @param uuid The UUID of the UserAgreement in question.
 #' @return UserAgreement object.
-#' @name user_agreements.update
+#' @name user_agreements_update
 NULL
 
-#' user_agreements.delete
+#' user_agreements_delete
 #'
-#' user_agreements.delete is a method defined in Arvados class.
+#' user_agreements_delete is a method defined in Arvados class.
 #'
-#' @usage arv$user_agreements.delete(uuid)
+#' @usage arv$user_agreements_delete(uuid)
 #' @param uuid The UUID of the UserAgreement in question.
 #' @return UserAgreement object.
-#' @name user_agreements.delete
+#' @name user_agreements_delete
 NULL
 
-#' user_agreements.signatures
+#' user_agreements_signatures
 #'
-#' user_agreements.signatures is a method defined in Arvados class.
+#' user_agreements_signatures is a method defined in Arvados class.
 #'
-#' @usage arv$user_agreements.signatures(NULL)
+#' @usage arv$user_agreements_signatures(NULL)
 #' @return UserAgreement object.
-#' @name user_agreements.signatures
+#' @name user_agreements_signatures
 NULL
 
-#' user_agreements.sign
+#' user_agreements_sign
 #'
-#' user_agreements.sign is a method defined in Arvados class.
+#' user_agreements_sign is a method defined in Arvados class.
 #'
-#' @usage arv$user_agreements.sign(NULL)
+#' @usage arv$user_agreements_sign(NULL)
 #' @return UserAgreement object.
-#' @name user_agreements.sign
+#' @name user_agreements_sign
 NULL
 
-#' user_agreements.list
+#' user_agreements_list
 #'
-#' user_agreements.list is a method defined in Arvados class.
+#' user_agreements_list is a method defined in Arvados class.
 #'
-#' @usage arv$user_agreements.list(filters = NULL,
+#' @usage arv$user_agreements_list(filters = NULL,
 #' 	where = NULL, order = NULL, select = NULL,
 #' 	distinct = NULL, limit = "100", offset = "0",
 #' 	count = "exact", cluster_id = NULL, bypass_federation = NULL)
@@ -1327,16 +1379,16 @@ NULL
 #' @param cluster_id List objects on a remote federated cluster instead of the current one.
 #' @param bypass_federation bypass federation behavior, list items from local instance database only
 #' @return UserAgreementList object.
-#' @name user_agreements.list
+#' @name user_agreements_list
 NULL
 
-#' user_agreements.new
+#' user_agreements_new
 #'
-#' user_agreements.new is a method defined in Arvados class.
+#' user_agreements_new is a method defined in Arvados class.
 #'
-#' @usage arv$user_agreements.new(NULL)
+#' @usage arv$user_agreements_new(NULL)
 #' @return UserAgreement object.
-#' @name user_agreements.new
+#' @name user_agreements_new
 NULL
 
 #' configs.get
@@ -1348,53 +1400,109 @@ NULL
 #' @name configs.get
 NULL
 
+#' projects_properties_set
+#'
+#' projects_properties_set is a method defined in Arvados class that enables setting properties.
+#'
+#' @usage arv$projects_properties_set(listProperties, projectUUID)
+#' @param listProperties List of new properties.
+#' @param projectUUID A uuid of a project / file.
+#' @return Project object.
+#' @name projects_properties_set
+NULL
+
+#' projects_properties_append
+#'
+#' projects_properties_append is a method defined in Arvados class that enables appending properties.
+#'
+#' @usage arv$projects_properties_append(listOfNewProperties, projectUUID)
+#' @param listOfNewProperties List of new properties.
+#' @param projectUUID A uuid of a project / file.
+#' @return Project object.
+#' @name projects_properties_append
+NULL
+
+#' projects_properties_get
+#'
+#' projects_properties_get is a method defined in Arvados class that enables appending properties.
+#'
+#' @usage arv$projects_properties_get(uuid)
+#' @param uuid A uuid of a project / file.
+#' @return Project object.
+#' @name projects_properties_get
+NULL
+
+#' projects_properties_delete
+#'
+#' projects_properties_delete is a method defined in Arvados class that enables appending properties.
+#'
+#' @usage arv$projects_properties_delete(oneProp, uuid)
+#' @param oneProp Property to be deleted.
+#' @param uuid A uuid of a project / file.
+#' @return Project object.
+#' @name projects_properties_delete
+NULL
+
+#' projects_exist
+#'
+#' projects_exist is a method defined in Arvados class that enables checking id the project with such a UUID exist.
+#'
+#' @usage arv$projects_exist(uuid)
+#' @param uuid A uuid of a project / file.
+#' @return Project object.
+#' @name projects_exist
+NULL
+
 #' project.get
 #'
-#' projects.get is equivalent to groups.get method.
+#' projects_get is equivalent to groups_get method.
 #'
-#' @usage arv$projects.get(uuid)
+#' @usage arv$projects_get(uuid)
 #' @param uuid The UUID of the Group in question.
 #' @return Group object.
-#' @name projects.get
+#' @name projects_get
 NULL
 
 #' project.create
 #'
-#' projects.create wrapps groups.create method by setting group_class attribute to "project".
+#' projects_create wrapps groups_create method by setting group_class attribute to "project".
 #'
-#' @usage arv$projects.create(group, ensure_unique_name = "false")
-#' @param group Group object.
-#' @param ensure_unique_name Adjust name to ensure uniqueness instead of returning an error on (owner_uuid, name) collision.
+#' @usage arv$projects_create(name, description, owner_uuid, properties = NULL, ensure_unique_name = "false")
+#' @param name Name of the project.
+#' @param description Description of the project.
+#' @param owner_uuid UUID of the maternal project to created one.
+#' @param properties List of the properties of the project.
+#' @param ensure_unique_name Adjust name to ensure uniqueness instead of returning an error on (owner_uuid, name) collision_
 #' @return Group object.
-#' @name projects.create
+#' @name projects_create
 NULL
 
 #' project.update
 #'
-#' projects.update wrapps groups.update method by setting group_class attribute to "project".
+#' projects_update wrapps groups_update method by setting group_class attribute to "project".
 #'
-#' @usage arv$projects.update(group, uuid)
-#' @param group Group object.
+#' @usage arv$projects_update(..., uuid)
+#' @param ... Feature to be updated (name, description, properties)
 #' @param uuid The UUID of the Group in question.
 #' @return Group object.
-#' @name projects.update
+#' @name projects_update
 NULL
 
 #' project.delete
 #'
-#' projects.delete is equivalent to groups.delete method.
+#' projects_delete is equivalent to groups_delete method.
 #'
 #' @usage arv$project.delete(uuid)
 #' @param uuid The UUID of the Group in question.
 #' @return Group object.
-#' @name projects.delete
+#' @name projects_delete
 NULL
 
 #' project.list
 #'
-#' projects.list wrapps groups.list method by setting group_class attribute to "project".
+#' projects_list wrapps groups_list method by setting group_class attribute to "project".
 #'
-#' @usage arv$projects.list(filters = NULL,
+#' @usage arv$projects_list(filters = NULL,
 #' 	where = NULL, order = NULL, distinct = NULL,
 #' 	limit = "100", offset = "0", count = "exact",
 #' 	include_trash = NULL, uuid = NULL, recursive = NULL)
@@ -1409,154 +1517,191 @@ NULL
 #' @param uuid
 #' @param recursive Include contents from child groups recursively.
 #' @return Group object.
-#' @name projects.list
+#' @name projects_list
 NULL
 
 #' Arvados
 #'
-#' Arvados class gives users ability to access Arvados REST API.
+#' Arvados class gives users ability to access Arvados REST API. It also allowes user to manipulate collections (and projects?)
 #'
 #' @section Usage:
-#' \preformatted{arv = Arvados$new(authToken = NULL, hostName = NULL, numRetries = 0)}
+#' \preformatted{arv = Arvados$new(authToken = "your Arvados token", hostName = "example.arvadosapi.com", numRetries = 0)}
 #'
 #' @section Arguments:
 #' \describe{
 #' 	\item{authToken}{Authentification token. If not specified ARVADOS_API_TOKEN environment variable will be used.}
 #' 	\item{hostName}{Host name. If not specified ARVADOS_API_HOST environment variable will be used.}
-#' 	\item{numRetries}{Number which specifies how many times to retry failed service requests.}
+#' 	\item{numRetries}{Number which specifies how many times to retry failed service requests_}
 #' }
 #'
 #' @section Methods:
 #' \describe{
-#' 	\item{}{\code{\link{api_client_authorizations.create}}}
-#' 	\item{}{\code{\link{api_client_authorizations.create_system_auth}}}
-#' 	\item{}{\code{\link{api_client_authorizations.current}}}
-#' 	\item{}{\code{\link{api_client_authorizations.delete}}}
-#' 	\item{}{\code{\link{api_client_authorizations.get}}}
-#' 	\item{}{\code{\link{api_client_authorizations.list}}}
-#' 	\item{}{\code{\link{api_client_authorizations.update}}}
-#' 	\item{}{\code{\link{api_clients.create}}}
-#' 	\item{}{\code{\link{api_clients.delete}}}
-#' 	\item{}{\code{\link{api_clients.get}}}
-#' 	\item{}{\code{\link{api_clients.list}}}
-#' 	\item{}{\code{\link{api_clients.update}}}
-#' 	\item{}{\code{\link{authorized_keys.create}}}
-#' 	\item{}{\code{\link{authorized_keys.delete}}}
-#' 	\item{}{\code{\link{authorized_keys.get}}}
-#' 	\item{}{\code{\link{authorized_keys.list}}}
-#' 	\item{}{\code{\link{authorized_keys.update}}}
-#' 	\item{}{\code{\link{collections.create}}}
-#' 	\item{}{\code{\link{collections.delete}}}
-#' 	\item{}{\code{\link{collections.get}}}
-#' 	\item{}{\code{\link{collections.list}}}
-#' 	\item{}{\code{\link{collections.provenance}}}
-#' 	\item{}{\code{\link{collections.trash}}}
-#' 	\item{}{\code{\link{collections.untrash}}}
-#' 	\item{}{\code{\link{collections.update}}}
-#' 	\item{}{\code{\link{collections.used_by}}}
+#' 	\item{}{\code{\link{api_client_authorizations_create}}}
+#' 	\item{}{\code{\link{api_client_authorizations_create_system_auth}}}
+#' 	\item{}{\code{\link{api_client_authorizations_current}}}
+#' 	\item{}{\code{\link{api_client_authorizations_delete}}}
+#' 	\item{}{\code{\link{api_client_authorizations_get}}}
+#' 	\item{}{\code{\link{api_client_authorizations_list}}}
+#' 	\item{}{\code{\link{api_client_authorizations_update}}}
+#' 	\item{}{\code{\link{api_clients_create}}}
+#' 	\item{}{\code{\link{api_clients_delete}}}
+#' 	\item{}{\code{\link{api_clients_get}}}
+#' 	\item{}{\code{\link{api_clients_list}}}
+#' 	\item{}{\code{\link{api_clients_update}}}
+#' 	\item{}{\code{\link{authorized_keys_create}}}
+#' 	\item{}{\code{\link{authorized_keys_delete}}}
+#' 	\item{}{\code{\link{authorized_keys_get}}}
+#' 	\item{}{\code{\link{authorized_keys_list}}}
+#' 	\item{}{\code{\link{authorized_keys_update}}}
+#' 	\item{}{\code{\link{collections_create}}}
+#' 	\item{}{\code{\link{collections_delete}}}
+#' 	\item{}{\code{\link{collections_get}}}
+#' 	\item{}{\code{\link{collections_list}}}
+#' 	\item{}{\code{\link{collections_provenance}}}
+#' 	\item{}{\code{\link{collections_trash}}}
+#' 	\item{}{\code{\link{collections_untrash}}}
+#' 	\item{}{\code{\link{collections_update}}}
+#' 	\item{}{\code{\link{collections_used_by}}}
 #' 	\item{}{\code{\link{configs.get}}}
-#' 	\item{}{\code{\link{container_requests.create}}}
-#' 	\item{}{\code{\link{container_requests.delete}}}
-#' 	\item{}{\code{\link{container_requests.get}}}
-#' 	\item{}{\code{\link{container_requests.list}}}
-#' 	\item{}{\code{\link{container_requests.update}}}
-#' 	\item{}{\code{\link{containers.auth}}}
-#' 	\item{}{\code{\link{containers.create}}}
-#' 	\item{}{\code{\link{containers.current}}}
-#' 	\item{}{\code{\link{containers.delete}}}
-#' 	\item{}{\code{\link{containers.get}}}
-#' 	\item{}{\code{\link{containers.list}}}
-#' 	\item{}{\code{\link{containers.lock}}}
-#' 	\item{}{\code{\link{containers.secret_mounts}}}
-#' 	\item{}{\code{\link{containers.unlock}}}
-#' 	\item{}{\code{\link{containers.update}}}
-#' 	\item{}{\code{\link{groups.contents}}}
-#' 	\item{}{\code{\link{groups.create}}}
-#' 	\item{}{\code{\link{groups.delete}}}
-#' 	\item{}{\code{\link{groups.get}}}
-#' 	\item{}{\code{\link{groups.list}}}
-#' 	\item{}{\code{\link{groups.shared}}}
-#' 	\item{}{\code{\link{groups.trash}}}
-#' 	\item{}{\code{\link{groups.untrash}}}
-#' 	\item{}{\code{\link{groups.update}}}
-#' 	\item{}{\code{\link{keep_services.accessible}}}
-#' 	\item{}{\code{\link{keep_services.create}}}
-#' 	\item{}{\code{\link{keep_services.delete}}}
-#' 	\item{}{\code{\link{keep_services.get}}}
-#' 	\item{}{\code{\link{keep_services.list}}}
-#' 	\item{}{\code{\link{keep_services.update}}}
-#' 	\item{}{\code{\link{links.create}}}
-#' 	\item{}{\code{\link{links.delete}}}
-#' 	\item{}{\code{\link{links.get}}}
-#' 	\item{}{\code{\link{links.get_permissions}}}
-#' 	\item{}{\code{\link{links.list}}}
-#' 	\item{}{\code{\link{links.update}}}
-#' 	\item{}{\code{\link{logs.create}}}
-#' 	\item{}{\code{\link{logs.delete}}}
-#' 	\item{}{\code{\link{logs.get}}}
-#' 	\item{}{\code{\link{logs.list}}}
-#' 	\item{}{\code{\link{logs.update}}}
-#' 	\item{}{\code{\link{projects.create}}}
-#' 	\item{}{\code{\link{projects.delete}}}
-#' 	\item{}{\code{\link{projects.get}}}
-#' 	\item{}{\code{\link{projects.list}}}
-#' 	\item{}{\code{\link{projects.update}}}
-#' 	\item{}{\code{\link{repositories.create}}}
-#' 	\item{}{\code{\link{repositories.delete}}}
-#' 	\item{}{\code{\link{repositories.get}}}
-#' 	\item{}{\code{\link{repositories.get_all_permissions}}}
-#' 	\item{}{\code{\link{repositories.list}}}
-#' 	\item{}{\code{\link{repositories.update}}}
-#' 	\item{}{\code{\link{user_agreements.create}}}
-#' 	\item{}{\code{\link{user_agreements.delete}}}
-#' 	\item{}{\code{\link{user_agreements.get}}}
-#' 	\item{}{\code{\link{user_agreements.list}}}
-#' 	\item{}{\code{\link{user_agreements.new}}}
-#' 	\item{}{\code{\link{user_agreements.sign}}}
-#' 	\item{}{\code{\link{user_agreements.signatures}}}
-#' 	\item{}{\code{\link{user_agreements.update}}}
-#' 	\item{}{\code{\link{users.activate}}}
-#' 	\item{}{\code{\link{users.create}}}
-#' 	\item{}{\code{\link{users.current}}}
-#' 	\item{}{\code{\link{users.delete}}}
-#' 	\item{}{\code{\link{users.get}}}
-#' 	\item{}{\code{\link{users.list}}}
-#' 	\item{}{\code{\link{users.merge}}}
-#' 	\item{}{\code{\link{users.setup}}}
-#' 	\item{}{\code{\link{users.system}}}
-#' 	\item{}{\code{\link{users.unsetup}}}
-#' 	\item{}{\code{\link{users.update}}}
-#' 	\item{}{\code{\link{virtual_machines.create}}}
-#' 	\item{}{\code{\link{virtual_machines.delete}}}
-#' 	\item{}{\code{\link{virtual_machines.get}}}
-#' 	\item{}{\code{\link{virtual_machines.get_all_logins}}}
-#' 	\item{}{\code{\link{virtual_machines.list}}}
-#' 	\item{}{\code{\link{virtual_machines.logins}}}
-#' 	\item{}{\code{\link{virtual_machines.update}}}
-#' 	\item{}{\code{\link{workflows.create}}}
-#' 	\item{}{\code{\link{workflows.delete}}}
-#' 	\item{}{\code{\link{workflows.get}}}
-#' 	\item{}{\code{\link{workflows.list}}}
-#' 	\item{}{\code{\link{workflows.update}}}
+#' 	\item{}{\code{\link{projects_properties_set}}}
+#' 	\item{}{\code{\link{projects_properties_append}}}
+#' 	\item{}{\code{\link{projects_properties_get}}}
+#' 	\item{}{\code{\link{projects_properties_delete}}}
+#' 	\item{}{\code{\link{container_requests_create}}}
+#' 	\item{}{\code{\link{container_requests_delete}}}
+#' 	\item{}{\code{\link{container_requests_get}}}
+#' 	\item{}{\code{\link{container_requests_list}}}
+#' 	\item{}{\code{\link{container_requests_update}}}
+#' 	\item{}{\code{\link{containers_auth}}}
+#' 	\item{}{\code{\link{containers_create}}}
+#' 	\item{}{\code{\link{containers_current}}}
+#' 	\item{}{\code{\link{containers_delete}}}
+#' 	\item{}{\code{\link{containers_get}}}
+#' 	\item{}{\code{\link{containers_list}}}
+#' 	\item{}{\code{\link{containers_lock}}}
+#' 	\item{}{\code{\link{containers_secret_mounts}}}
+#' 	\item{}{\code{\link{containers_unlock}}}
+#' 	\item{}{\code{\link{containers_update}}}
+#' 	\item{}{\code{\link{groups_contents}}}
+#' 	\item{}{\code{\link{groups_create}}}
+#' 	\item{}{\code{\link{groups_delete}}}
+#' 	\item{}{\code{\link{groups_get}}}
+#' 	\item{}{\code{\link{groups_list}}}
+#' 	\item{}{\code{\link{groups_shared}}}
+#' 	\item{}{\code{\link{groups_trash}}}
+#' 	\item{}{\code{\link{groups_untrash}}}
+#' 	\item{}{\code{\link{groups_update}}}
+#' 	\item{}{\code{\link{keep_services_accessible}}}
+#' 	\item{}{\code{\link{keep_services_create}}}
+#' 	\item{}{\code{\link{keep_services_delete}}}
+#' 	\item{}{\code{\link{keep_services_get}}}
+#' 	\item{}{\code{\link{keep_services_list}}}
+#' 	\item{}{\code{\link{keep_services_update}}}
+#' 	\item{}{\code{\link{projects_permission_set}}}
+#' 	\item{}{\code{\link{projects_permission_remove}}}
+#' 	\item{}{\code{\link{projects_permission_update}}}
+#' 	\item{}{\code{\link{projects_permission_check}}}
+#' 	\item{}{\code{\link{links_create}}}
+#' 	\item{}{\code{\link{links_delete}}}
+#' 	\item{}{\code{\link{links_get}}}
+#' 	\item{}{\code{\link{links_get_permissions}}}
+#' 	\item{}{\code{\link{links_list}}}
+#' 	\item{}{\code{\link{links_update}}}
+#' 	\item{}{\code{\link{logs_create}}}
+#' 	\item{}{\code{\link{logs_delete}}}
+#' 	\item{}{\code{\link{logs_get}}}
+#' 	\item{}{\code{\link{logs_list}}}
+#' 	\item{}{\code{\link{logs_update}}}
+#' 	\item{}{\code{\link{projects_create}}}
+#' 	\item{}{\code{\link{projects_delete}}}
+#' 	\item{}{\code{\link{projects_exist}}}
+#' 	\item{}{\code{\link{projects_get}}}
+#' 	\item{}{\code{\link{projects_list}}}
+#' 	\item{}{\code{\link{projects_update}}}
+#' 	\item{}{\code{\link{repositories_create}}}
+#' 	\item{}{\code{\link{repositories_delete}}}
+#' 	\item{}{\code{\link{repositories_get}}}
+#' 	\item{}{\code{\link{repositories_get_all_permissions}}}
+#' 	\item{}{\code{\link{repositories_list}}}
+#' 	\item{}{\code{\link{repositories_update}}}
+#' 	\item{}{\code{\link{user_agreements_create}}}
+#' 	\item{}{\code{\link{user_agreements_delete}}}
+#' 	\item{}{\code{\link{user_agreements_get}}}
+#' 	\item{}{\code{\link{user_agreements_list}}}
+#' 	\item{}{\code{\link{user_agreements_new}}}
+#' 	\item{}{\code{\link{user_agreements_sign}}}
+#' 	\item{}{\code{\link{user_agreements_signatures}}}
+#' 	\item{}{\code{\link{user_agreements_update}}}
+#' 	\item{}{\code{\link{users_activate}}}
+#' 	\item{}{\code{\link{users_create}}}
+#' 	\item{}{\code{\link{users_current}}}
+#' 	\item{}{\code{\link{users_delete}}}
+#' 	\item{}{\code{\link{users_get}}}
+#' 	\item{}{\code{\link{users_list}}}
+#' 	\item{}{\code{\link{users_merge}}}
+#' 	\item{}{\code{\link{users_setup}}}
+#' 	\item{}{\code{\link{users_system}}}
+#' 	\item{}{\code{\link{users_unsetup}}}
+#' 	\item{}{\code{\link{users_update}}}
+#' 	\item{}{\code{\link{virtual_machines_create}}}
+#' 	\item{}{\code{\link{virtual_machines_delete}}}
+#' 	\item{}{\code{\link{virtual_machines_get}}}
+#' 	\item{}{\code{\link{virtual_machines_get_all_logins}}}
+#' 	\item{}{\code{\link{virtual_machines_list}}}
+#' 	\item{}{\code{\link{virtual_machines_logins}}}
+#' 	\item{}{\code{\link{virtual_machines_update}}}
+#' 	\item{}{\code{\link{workflows_create}}}
+#' 	\item{}{\code{\link{workflows_delete}}}
+#' 	\item{}{\code{\link{workflows_get}}}
+#' 	\item{}{\code{\link{workflows_list}}}
+#' 	\item{}{\code{\link{workflows_update}}}
 #' }
 #'
 #' @name Arvados
 #' @examples
 #' \dontrun{
+#' # initialize API and a collection object:
 #' arv <- Arvados$new("your Arvados token", "example.arvadosapi.com")
+#' collection <- arv$collections_get("uuid")
 #'
-#' collection <- arv$collections.get("uuid")
+#' # Filtr collection by metadata and create list of them
+#' collectionList <- arv$collections_list(list(list("name", "like", "Test%")))
+#' # add offset of 0 and default limit of 100
+#' collectionList <- arv$collections_list(list(list("name", "like", "Test%")), limit = 10, offset = 2)
+#' # list all collections even if the number of items is greater than maximum API limit:
+#' collectionList <- listAll(arv$collections_list, list(list("name", "like", "Test%")))
 #'
-#' collectionList <- arv$collections.list(list(list("name", "like", "Test%")))
-#' collectionList <- listAll(arv$collections.list, list(list("name", "like", "Test%")))
+#' # delete a collection:
+#' deletedCollection <- arv$collections_delete("uuid")
 #'
-#' deletedCollection <- arv$collections.delete("uuid")
-#'
-#' updatedCollection <- arv$collections.update(list(name = "New name", description = "New description"),
+#' # update a collection’s metadata:
+#' updatedCollection <- arv$collections_update(list(name = "New name", description = "New description"),
 #'                                             "uuid")
 #'
-#' createdCollection <- arv$collections.create(list(name = "Example",
+#' # create a new collection:
+#' createdCollection <- arv$collections_create(list(name = "Example",
 #'                                                  description = "This is a test collection"))
+#'
+#' # get a project:
+#' project <- arv$projects_get("ardev-j7d0g-u8f5hi7a9klsiw7")
+#'
+#' # list projects:
+#' # list subprojects of a project
+#' projects <- arv$projects_list(list(list("owner_uuid", "=", "aaaaa-j7d0g-ccccccccccccccc")))
+#' # list projects which have names beginning with Example
+#' examples <- arv$projects_list(list(list("name","like","Example%")))
+#' # list all projects even if the number of items is greater than maximum API limit:
+#' projects <- listAll(arv$projects_list, list(list("name","like","Example%")))
+#'
+#' # delete a project:
+#' deletedProject <- arv$projects_delete(newProject[["uuid"]])
+#'
+#' # create project:
+#' newProject <- arv$projects_create(list(name = "project_name", description = "project description"))
+#'
+#' # update project:
+#' updatedProject <- arv$projects_update(list(name = "new_name", description = "new description"), newProject$uuid)
+#'
 #' }
 NULL
 
@@ -1592,39 +1737,97 @@ Arvados <- R6::R6Class(
 
 		},
 
-		projects.get = function(uuid)
+		projects_exist = function(uuid)
 		{
-			self$groups.get(uuid)
+		    projekty <- arv$projects_list(list(list("uuid", 'like', uuid)))
+		    value <- length(projekty$items)
+
+		    if (value == 1){
+		        cat(format('There is one project with this UUID'))
+		    } else {
+		        cat(format('There is no project with this UUID'))
+		    }
 		},
 
-		projects.create = function(group, ensure_unique_name = "false")
+		projects_get = function(uuid)
 		{
-			group <- c("group_class" = "project", group)
-			self$groups.create(group, ensure_unique_name)
+			self$groups_get(uuid)
 		},
 
-		projects.update = function(group, uuid)
+		projects_create = function(name, description, owner_uuid, properties = NULL, ensure_unique_name = "false")
 		{
-			group <- c("group_class" = "project", group)
-			self$groups.update(group, uuid)
+		    group <- list(name = name, description = description, owner_uuid = owner_uuid, properties = properties)
+		    group <- c("group_class" = "project", group)
+		    self$groups_create(group, ensure_unique_name)
 		},
 
-		projects.list = function(filters = NULL, where = NULL,
+		projects_properties_set = function(listProperties, projectUUID)
+		{
+		    #listProperties <- list("properties" = listProperties)
+		    group <- c("group_class" = "project", list("properties" = listProperties))
+		    self$groups_update(group, projectUUID)
+
+		},
+
+		projects_properties_append = function(properties, object)
+		{
+		    Proj <- self$projects_list(list(list('uuid', 'like', object)))
+		    ProjProp <- Proj$items[[1]]$properties
+		    newListOfProperties <- c(ProjProp, properties)
+
+		    group <- c("group_class" = "project", list("properties" = newListOfProperties))
+		    self$groups_update(group, object);
+
+		},
+
+		projects_properties_get = function(uuid)
+		{
+		    Proj <- arv$projects_list(list(list('uuid', 'like', object)))
+		    Proj$items[[1]]$properties
+		},
+
+		projects_properties_delete = function(oneProp, uuid)
+		{
+		    Proj <- arv$projects_list(list(list('uuid', 'like', uuid))) # find project
+		    ProjProp <- Proj$items[[1]]$properties # find project properties
+		    for (i in 1:length(ProjProp)){
+		        wynik <- identical(ProjProp[i],oneProp) # does some of the properties simillar to the oneProp?
+		        if (wynik == TRUE) {
+		            ProjProp <- ProjProp[names(ProjProp) != names(oneProp)]
+		            arv$projects_properties_set(ProjProp, uuid)
+		        }
+		    }
+		},
+
+		projects_update = function(..., uuid) {
+		    vec <- list(...)
+		    for (i in 1:length(vec))
+		    {
+		        if (names(vec[i]) == 'properties') {
+		            w <- self$projects_properties_append(vec$properties, object = uuid)
+		        }
+		    }
+		    vec2 <- vec[names(vec) != "properties"]
+		    vec2 <- c("group_class" = "project", vec2)
+		    z <- self$groups_update(vec2, uuid)
+		},
+
+		projects_list = function(filters = NULL, where = NULL,
 			order = NULL, select = NULL, distinct = NULL,
 			limit = "100", offset = "0", count = "exact",
 			include_trash = NULL)
 		{
 			filters[[length(filters) + 1]] <- list("group_class", "=", "project")
-			self$groups.list(filters, where, order, select, distinct,
+			self$groups_list(filters, where, order, select, distinct,
 			                 limit, offset, count, include_trash)
 		},
 
-		projects.delete = function(uuid)
+		projects_delete = function(uuid)
 		{
-			self$groups.delete(uuid)
+			self$groups_delete(uuid)
 		},
 
-		api_clients.get = function(uuid)
+		api_clients_get = function(uuid)
 		{
 			endPoint <- stringr::str_interp("api_clients/${uuid}")
 			url <- paste0(private$host, endPoint)
@@ -1644,7 +1847,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		api_clients.create = function(apiclient,
+		api_clients_create = function(apiclient,
 			ensure_unique_name = "false", cluster_id = NULL)
 		{
 			endPoint <- stringr::str_interp("api_clients")
@@ -1670,7 +1873,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		api_clients.update = function(apiclient, uuid)
+		api_clients_update = function(apiclient, uuid)
 		{
 			endPoint <- stringr::str_interp("api_clients/${uuid}")
 			url <- paste0(private$host, endPoint)
@@ -1694,7 +1897,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		api_clients.delete = function(uuid)
+		api_clients_delete = function(uuid)
 		{
 			endPoint <- stringr::str_interp("api_clients/${uuid}")
 			url <- paste0(private$host, endPoint)
@@ -1714,7 +1917,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		api_clients.list = function(filters = NULL,
+		api_clients_list = function(filters = NULL,
 			where = NULL, order = NULL, select = NULL,
 			distinct = NULL, limit = "100", offset = "0",
 			count = "exact", cluster_id = NULL, bypass_federation = NULL)
@@ -1740,7 +1943,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		api_client_authorizations.get = function(uuid)
+		api_client_authorizations_get = function(uuid)
 		{
 			endPoint <- stringr::str_interp("api_client_authorizations/${uuid}")
 			url <- paste0(private$host, endPoint)
@@ -1760,7 +1963,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		api_client_authorizations.create = function(apiclientauthorization,
+		api_client_authorizations_create = function(apiclientauthorization,
 			ensure_unique_name = "false", cluster_id = NULL)
 		{
 			endPoint <- stringr::str_interp("api_client_authorizations")
@@ -1786,7 +1989,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		api_client_authorizations.update = function(apiclientauthorization, uuid)
+		api_client_authorizations_update = function(apiclientauthorization, uuid)
 		{
 			endPoint <- stringr::str_interp("api_client_authorizations/${uuid}")
 			url <- paste0(private$host, endPoint)
@@ -1810,7 +2013,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		api_client_authorizations.delete = function(uuid)
+		api_client_authorizations_delete = function(uuid)
 		{
 			endPoint <- stringr::str_interp("api_client_authorizations/${uuid}")
 			url <- paste0(private$host, endPoint)
@@ -1830,7 +2033,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		api_client_authorizations.create_system_auth = function(api_client_id = NULL, scopes = NULL)
+		api_client_authorizations_create_system_auth = function(api_client_id = NULL, scopes = NULL)
 		{
 			endPoint <- stringr::str_interp("api_client_authorizations/create_system_auth")
 			url <- paste0(private$host, endPoint)
@@ -1851,7 +2054,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		api_client_authorizations.current = function()
+		api_client_authorizations_current = function()
 		{
 			endPoint <- stringr::str_interp("api_client_authorizations/current")
 			url <- paste0(private$host, endPoint)
@@ -1871,7 +2074,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		api_client_authorizations.list = function(filters = NULL,
+		api_client_authorizations_list = function(filters = NULL,
 			where = NULL, order = NULL, select = NULL,
 			distinct = NULL, limit = "100", offset = "0",
 			count = "exact", cluster_id = NULL, bypass_federation = NULL)
@@ -1897,7 +2100,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		authorized_keys.get = function(uuid)
+		authorized_keys_get = function(uuid)
 		{
 			endPoint <- stringr::str_interp("authorized_keys/${uuid}")
 			url <- paste0(private$host, endPoint)
@@ -1917,7 +2120,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		authorized_keys.create = function(authorizedkey,
+		authorized_keys_create = function(authorizedkey,
 			ensure_unique_name = "false", cluster_id = NULL)
 		{
 			endPoint <- stringr::str_interp("authorized_keys")
@@ -1943,7 +2146,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		authorized_keys.update = function(authorizedkey, uuid)
+		authorized_keys_update = function(authorizedkey, uuid)
 		{
 			endPoint <- stringr::str_interp("authorized_keys/${uuid}")
 			url <- paste0(private$host, endPoint)
@@ -1967,7 +2170,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		authorized_keys.delete = function(uuid)
+		authorized_keys_delete = function(uuid)
 		{
 			endPoint <- stringr::str_interp("authorized_keys/${uuid}")
 			url <- paste0(private$host, endPoint)
@@ -1987,7 +2190,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		authorized_keys.list = function(filters = NULL,
+		authorized_keys_list = function(filters = NULL,
 			where = NULL, order = NULL, select = NULL,
 			distinct = NULL, limit = "100", offset = "0",
 			count = "exact", cluster_id = NULL, bypass_federation = NULL)
@@ -2013,7 +2216,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		collections.get = function(uuid)
+		collections_get = function(uuid)
 		{
 			endPoint <- stringr::str_interp("collections/${uuid}")
 			url <- paste0(private$host, endPoint)
@@ -2033,7 +2236,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		collections.create = function(collection,
+		collections_create = function(name, description, owner_uuid = NULL, properties = NULL, # name and description are obligatory now
 			ensure_unique_name = "false", cluster_id = NULL)
 		{
 			endPoint <- stringr::str_interp("collections")
@@ -2043,6 +2246,7 @@ Arvados <- R6::R6Class(
 			queryArgs <- list(ensure_unique_name = ensure_unique_name,
 							  cluster_id = cluster_id)
 
+			collection <- list(name = name, description = description, owner_uuid = owner_uuid, properties = properties)
 			if(length(collection) > 0)
 				body <- jsonlite::toJSON(list(collection = collection),
 				                         auto_unbox = TRUE)
@@ -2053,13 +2257,18 @@ Arvados <- R6::R6Class(
 			                                   queryArgs, private$numRetries)
 			resource <- private$REST$httpParser$parseJSONResponse(response)
 
-			if(!is.null(resource$errors))
-				stop(resource$errors)
+			if(!is.null(resource$errors)){
+			    if(identical(sub('Entity:.*',"", resource$errors), "//railsapi.internal/arvados/v1/collections: 422 Unprocessable ")){
+			        cat(format("A collection with the given name already exists in this project. If you want to update it use collections_update() instead"))
+			    }else{
+			        stop(resource$errors)
+			    }
+			}
 
 			resource
 		},
 
-		collections.update = function(collection, uuid)
+		collections_update = function(collection, uuid)
 		{
 			endPoint <- stringr::str_interp("collections/${uuid}")
 			url <- paste0(private$host, endPoint)
@@ -2083,7 +2292,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		collections.delete = function(uuid)
+		collections_delete = function(uuid)
 		{
 			endPoint <- stringr::str_interp("collections/${uuid}")
 			url <- paste0(private$host, endPoint)
@@ -2103,7 +2312,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		collections.provenance = function(uuid)
+		collections_provenance = function(uuid)
 		{
 			endPoint <- stringr::str_interp("collections/${uuid}/provenance")
 			url <- paste0(private$host, endPoint)
@@ -2123,7 +2332,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		collections.used_by = function(uuid)
+		collections_used_by = function(uuid)
 		{
 			endPoint <- stringr::str_interp("collections/${uuid}/used_by")
 			url <- paste0(private$host, endPoint)
@@ -2143,7 +2352,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		collections.trash = function(uuid)
+		collections_trash = function(uuid)
 		{
 			endPoint <- stringr::str_interp("collections/${uuid}/trash")
 			url <- paste0(private$host, endPoint)
@@ -2163,7 +2372,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		collections.untrash = function(uuid)
+		collections_untrash = function(uuid)
 		{
 			endPoint <- stringr::str_interp("collections/${uuid}/untrash")
 			url <- paste0(private$host, endPoint)
@@ -2183,7 +2392,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		collections.list = function(filters = NULL,
+		collections_list = function(filters = NULL,
 			where = NULL, order = NULL, select = NULL,
 			distinct = NULL, limit = "100", offset = "0",
 			count = "exact", cluster_id = NULL, bypass_federation = NULL,
@@ -2211,7 +2420,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		containers.get = function(uuid)
+		containers_get = function(uuid)
 		{
 			endPoint <- stringr::str_interp("containers/${uuid}")
 			url <- paste0(private$host, endPoint)
@@ -2231,7 +2440,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		containers.create = function(container, ensure_unique_name = "false",
+		containers_create = function(container, ensure_unique_name = "false",
 			cluster_id = NULL)
 		{
 			endPoint <- stringr::str_interp("containers")
@@ -2257,7 +2466,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		containers.update = function(container, uuid)
+		containers_update = function(container, uuid)
 		{
 			endPoint <- stringr::str_interp("containers/${uuid}")
 			url <- paste0(private$host, endPoint)
@@ -2281,7 +2490,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		containers.delete = function(uuid)
+		containers_delete = function(uuid)
 		{
 			endPoint <- stringr::str_interp("containers/${uuid}")
 			url <- paste0(private$host, endPoint)
@@ -2301,7 +2510,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		containers.auth = function(uuid)
+		containers_auth = function(uuid)
 		{
 			endPoint <- stringr::str_interp("containers/${uuid}/auth")
 			url <- paste0(private$host, endPoint)
@@ -2321,7 +2530,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		containers.lock = function(uuid)
+		containers_lock = function(uuid)
 		{
 			endPoint <- stringr::str_interp("containers/${uuid}/lock")
 			url <- paste0(private$host, endPoint)
@@ -2341,7 +2550,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		containers.unlock = function(uuid)
+		containers_unlock = function(uuid)
 		{
 			endPoint <- stringr::str_interp("containers/${uuid}/unlock")
 			url <- paste0(private$host, endPoint)
@@ -2361,7 +2570,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		containers.secret_mounts = function(uuid)
+		containers_secret_mounts = function(uuid)
 		{
 			endPoint <- stringr::str_interp("containers/${uuid}/secret_mounts")
 			url <- paste0(private$host, endPoint)
@@ -2381,7 +2590,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		containers.current = function()
+		containers_current = function()
 		{
 			endPoint <- stringr::str_interp("containers/current")
 			url <- paste0(private$host, endPoint)
@@ -2401,7 +2610,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		containers.list = function(filters = NULL,
+		containers_list = function(filters = NULL,
 			where = NULL, order = NULL, select = NULL,
 			distinct = NULL, limit = "100", offset = "0",
 			count = "exact", cluster_id = NULL, bypass_federation = NULL)
@@ -2427,7 +2636,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		container_requests.get = function(uuid)
+		container_requests_get = function(uuid)
 		{
 			endPoint <- stringr::str_interp("container_requests/${uuid}")
 			url <- paste0(private$host, endPoint)
@@ -2447,7 +2656,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		container_requests.create = function(containerrequest,
+		container_requests_create = function(containerrequest,
 			ensure_unique_name = "false", cluster_id = NULL)
 		{
 			endPoint <- stringr::str_interp("container_requests")
@@ -2473,7 +2682,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		container_requests.update = function(containerrequest, uuid)
+		container_requests_update = function(containerrequest, uuid)
 		{
 			endPoint <- stringr::str_interp("container_requests/${uuid}")
 			url <- paste0(private$host, endPoint)
@@ -2497,7 +2706,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		container_requests.delete = function(uuid)
+		container_requests_delete = function(uuid)
 		{
 			endPoint <- stringr::str_interp("container_requests/${uuid}")
 			url <- paste0(private$host, endPoint)
@@ -2517,7 +2726,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		container_requests.list = function(filters = NULL,
+		container_requests_list = function(filters = NULL,
 			where = NULL, order = NULL, select = NULL,
 			distinct = NULL, limit = "100", offset = "0",
 			count = "exact", cluster_id = NULL, bypass_federation = NULL,
@@ -2545,7 +2754,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		groups.get = function(uuid)
+		groups_get = function(uuid)
 		{
 			endPoint <- stringr::str_interp("groups/${uuid}")
 			url <- paste0(private$host, endPoint)
@@ -2565,7 +2774,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		groups.create = function(group, ensure_unique_name = "false",
+		groups_create = function(group, ensure_unique_name = "false",
 			cluster_id = NULL, async = "false")
 		{
 			endPoint <- stringr::str_interp("groups")
@@ -2585,13 +2794,18 @@ Arvados <- R6::R6Class(
 			                                   queryArgs, private$numRetries)
 			resource <- private$REST$httpParser$parseJSONResponse(response)
 
-			if(!is.null(resource$errors))
-				stop(resource$errors)
+			if(!is.null(resource$errors)){
+			    if(identical(sub('Entity:.*',"", resource$errors), "//railsapi.internal/arvados/v1/groups: 422 Unprocessable ")){
+			        cat(format("Project of that name already exist. If you want to update it use project.update() instead"))
+			    }else{
+			        stop(resource$errors)
+			    }
+			}
 
 			resource
 		},
 
-		groups.update = function(group, uuid, async = "false")
+		groups_update = function(group, uuid, async = "false")
 		{
 			endPoint <- stringr::str_interp("groups/${uuid}")
 			url <- paste0(private$host, endPoint)
@@ -2615,7 +2829,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		groups.delete = function(uuid)
+		groups_delete = function(uuid)
 		{
 			endPoint <- stringr::str_interp("groups/${uuid}")
 			url <- paste0(private$host, endPoint)
@@ -2635,7 +2849,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		groups.contents = function(filters = NULL,
+		groups_contents = function(filters = NULL,
 			where = NULL, order = NULL, distinct = NULL,
 			limit = "100", offset = "0", count = "exact",
 			cluster_id = NULL, bypass_federation = NULL,
@@ -2664,7 +2878,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		groups.shared = function(filters = NULL,
+		groups_shared = function(filters = NULL,
 			where = NULL, order = NULL, select = NULL,
 			distinct = NULL, limit = "100", offset = "0",
 			count = "exact", cluster_id = NULL, bypass_federation = NULL,
@@ -2692,7 +2906,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		groups.trash = function(uuid)
+		groups_trash = function(uuid)
 		{
 			endPoint <- stringr::str_interp("groups/${uuid}/trash")
 			url <- paste0(private$host, endPoint)
@@ -2712,7 +2926,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		groups.untrash = function(uuid)
+		groups_untrash = function(uuid)
 		{
 			endPoint <- stringr::str_interp("groups/${uuid}/untrash")
 			url <- paste0(private$host, endPoint)
@@ -2732,7 +2946,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		groups.list = function(filters = NULL, where = NULL,
+		groups_list = function(filters = NULL, where = NULL,
 			order = NULL, select = NULL, distinct = NULL,
 			limit = "100", offset = "0", count = "exact",
 			cluster_id = NULL, bypass_federation = NULL,
@@ -2760,7 +2974,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		keep_services.get = function(uuid)
+		keep_services_get = function(uuid)
 		{
 			endPoint <- stringr::str_interp("keep_services/${uuid}")
 			url <- paste0(private$host, endPoint)
@@ -2780,7 +2994,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		keep_services.create = function(keepservice,
+		keep_services_create = function(keepservice,
 			ensure_unique_name = "false", cluster_id = NULL)
 		{
 			endPoint <- stringr::str_interp("keep_services")
@@ -2806,7 +3020,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		keep_services.update = function(keepservice, uuid)
+		keep_services_update = function(keepservice, uuid)
 		{
 			endPoint <- stringr::str_interp("keep_services/${uuid}")
 			url <- paste0(private$host, endPoint)
@@ -2830,7 +3044,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		keep_services.delete = function(uuid)
+		keep_services_delete = function(uuid)
 		{
 			endPoint <- stringr::str_interp("keep_services/${uuid}")
 			url <- paste0(private$host, endPoint)
@@ -2850,7 +3064,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		keep_services.accessible = function()
+		keep_services_accessible = function()
 		{
 			endPoint <- stringr::str_interp("keep_services/accessible")
 			url <- paste0(private$host, endPoint)
@@ -2870,7 +3084,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		keep_services.list = function(filters = NULL,
+		keep_services_list = function(filters = NULL,
 			where = NULL, order = NULL, select = NULL,
 			distinct = NULL, limit = "100", offset = "0",
 			count = "exact", cluster_id = NULL, bypass_federation = NULL)
@@ -2896,7 +3110,85 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		links.get = function(uuid)
+		projects_permission_give = function(type, object, user)
+		{
+		    # name of the link always needs to be a "permission"
+		    # option is can_read / can_write / can_manage
+		    # what_uuid is a uuid of a project / file
+		    # to_whom_uuid is a uuid of the person that gets the permission
+		    endPoint <- stringr::str_interp("links")
+		    url <- paste0(private$host, endPoint)
+		    headers <- list(Authorization = paste("Bearer", private$token),
+		                    "Content-Type" = "application/json")
+		    queryArgs <- NULL
+
+		    # it is possible to make it as pasting a list to function, not a 3 arg. What's better?
+		    link <- list("link_class" = "permission", "name" = type, "head_uuid" = object, "tail_uuid" = user)
+
+		    if(length(link) > 0)
+		        body <- jsonlite::toJSON(list(link = link),
+		                                 auto_unbox = TRUE)
+		    else
+		        body <- NULL
+
+		    response <- private$REST$http$exec("POST", url, headers, body,
+		                                       queryArgs, private$numRetries)
+		    resource <- private$REST$httpParser$parseJSONResponse(response)
+
+		    if(!is.null(resource$errors))
+		        stop(resource$errors)
+
+		    resource
+		},
+
+		projects_permission_remove = function(type, object, user)
+		{
+		    examples <- self$links_list(list(list("head_uuid","like", object))) # find file from someone
+
+		    w <- examples[which(sapply(examples$items, "[[", "tail_uuid") == user)] # wybór usera z dostępnych
+		    w3 <- w$items[which(sapply(w$items, "[[", "name") == type)] # wybór typu z dostępnych
+		    w4 <- w3[which(sapply(w3, "[[", "link_class") == 'permission')] # stałe
+
+		    if (length(w4) == 0) { # delete
+		        cat(format('No permition granted'))
+		    } else {
+		        self$links_delete(w4[[1]]$uuid)
+		    }
+
+		},
+
+		projects_permission_update = function(type_old, type_new, object, user) # check # wrong!!!
+		{
+		    link <- list("name" = type_new)
+
+		    examples <- self$links_list(list(list("head_uuid","like", object))) # find file from someone
+
+		    w <- examples[which(sapply(examples$items, "[[", "tail_uuid") == user)] # wybór usera z dostępnych
+		    w3 <- w$items[which(sapply(w$items, "[[", "name") == type_old)] # wybór typu z dostępnych
+		    w4 <- w3[which(sapply(w3, "[[", "link_class") == 'permission')] # stałe
+
+		    if (length(w4) == 0) { # delete
+		        cat(format('No permition granted'))
+		    } else {
+		        self$links_update(link, w4[[1]]$uuid)
+		    }
+		},
+
+		projects_permission_check = function(object, user, type = NULL) # checkes all the permissions or the specified one
+		{
+		    examples <- self$links_list(list(list("head_uuid","like", object))) # find file from someone
+
+		    w <- examples[which(sapply(examples$items, "[[", "tail_uuid") == user)] # all the permissions
+
+		    if (length(type) == 0 ){
+		        w
+		    } else {
+		        w3 <- w$items[which(sapply(w$items, "[[", "name") == type)]
+		        w3[which(sapply(w3, "[[", "link_class") == 'permission')] # stałe
+		    }
+		},
+
+		links_get = function(uuid)
 		{
 			endPoint <- stringr::str_interp("links/${uuid}")
 			url <- paste0(private$host, endPoint)
@@ -2916,7 +3208,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		links.create = function(link, ensure_unique_name = "false",
+		links_create = function(link, ensure_unique_name = "false",
 			cluster_id = NULL)
 		{
 			endPoint <- stringr::str_interp("links")
@@ -2942,13 +3234,13 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		links.update = function(link, uuid)
+		links_update = function(link, uuid, async = "false")
 		{
 			endPoint <- stringr::str_interp("links/${uuid}")
 			url <- paste0(private$host, endPoint)
 			headers <- list(Authorization = paste("Bearer", private$token),
 			                "Content-Type" = "application/json")
-			queryArgs <- NULL
+			queryArgs <- list(async = async)
 
 			if(length(link) > 0)
 				body <- jsonlite::toJSON(list(link = link),
@@ -2966,7 +3258,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		links.delete = function(uuid)
+		links_delete = function(uuid)
 		{
 			endPoint <- stringr::str_interp("links/${uuid}")
 			url <- paste0(private$host, endPoint)
@@ -2986,7 +3278,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		links.list = function(filters = NULL, where = NULL,
+		links_list = function(filters = NULL, where = NULL,
 			order = NULL, select = NULL, distinct = NULL,
 			limit = "100", offset = "0", count = "exact",
 			cluster_id = NULL, bypass_federation = NULL)
@@ -3012,7 +3304,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		links.get_permissions = function(uuid)
+		links_get_permissions = function(uuid)
 		{
 			endPoint <- stringr::str_interp("permissions/${uuid}")
 			url <- paste0(private$host, endPoint)
@@ -3032,7 +3324,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		logs.get = function(uuid)
+		logs_get = function(uuid)
 		{
 			endPoint <- stringr::str_interp("logs/${uuid}")
 			url <- paste0(private$host, endPoint)
@@ -3052,7 +3344,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		logs.create = function(log, ensure_unique_name = "false",
+		logs_create = function(log, ensure_unique_name = "false",
 			cluster_id = NULL)
 		{
 			endPoint <- stringr::str_interp("logs")
@@ -3078,7 +3370,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		logs.update = function(log, uuid)
+		logs_update = function(log, uuid)
 		{
 			endPoint <- stringr::str_interp("logs/${uuid}")
 			url <- paste0(private$host, endPoint)
@@ -3102,7 +3394,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		logs.delete = function(uuid)
+		logs_delete = function(uuid)
 		{
 			endPoint <- stringr::str_interp("logs/${uuid}")
 			url <- paste0(private$host, endPoint)
@@ -3122,7 +3414,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		logs.list = function(filters = NULL, where = NULL,
+		logs_list = function(filters = NULL, where = NULL,
 			order = NULL, select = NULL, distinct = NULL,
 			limit = "100", offset = "0", count = "exact",
 			cluster_id = NULL, bypass_federation = NULL)
@@ -3148,7 +3440,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		users.get = function(uuid)
+		users_get = function(uuid)
 		{
 			endPoint <- stringr::str_interp("users/${uuid}")
 			url <- paste0(private$host, endPoint)
@@ -3168,7 +3460,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		users.create = function(user, ensure_unique_name = "false",
+		users_create = function(user, ensure_unique_name = "false",
 			cluster_id = NULL)
 		{
 			endPoint <- stringr::str_interp("users")
@@ -3194,7 +3486,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		users.update = function(user, uuid, bypass_federation = NULL)
+		users_update = function(user, uuid, bypass_federation = NULL)
 		{
 			endPoint <- stringr::str_interp("users/${uuid}")
 			url <- paste0(private$host, endPoint)
@@ -3218,7 +3510,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		users.delete = function(uuid)
+		users_delete = function(uuid)
 		{
 			endPoint <- stringr::str_interp("users/${uuid}")
 			url <- paste0(private$host, endPoint)
@@ -3238,7 +3530,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		users.current = function()
+		users_current = function()
 		{
 			endPoint <- stringr::str_interp("users/current")
 			url <- paste0(private$host, endPoint)
@@ -3258,7 +3550,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		users.system = function()
+		users_system = function()
 		{
 			endPoint <- stringr::str_interp("users/system")
 			url <- paste0(private$host, endPoint)
@@ -3278,7 +3570,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		users.activate = function(uuid)
+		users_activate = function(uuid)
 		{
 			endPoint <- stringr::str_interp("users/${uuid}/activate")
 			url <- paste0(private$host, endPoint)
@@ -3298,7 +3590,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		users.setup = function(uuid = NULL, user = NULL,
+		users_setup = function(uuid = NULL, user = NULL,
 			repo_name = NULL, vm_uuid = NULL, send_notification_email = "false")
 		{
 			endPoint <- stringr::str_interp("users/setup")
@@ -3321,7 +3613,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		users.unsetup = function(uuid)
+		users_unsetup = function(uuid)
 		{
 			endPoint <- stringr::str_interp("users/${uuid}/unsetup")
 			url <- paste0(private$host, endPoint)
@@ -3341,7 +3633,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		users.merge = function(new_owner_uuid, new_user_token = NULL,
+		users_merge = function(new_owner_uuid, new_user_token = NULL,
 			redirect_to_new_user = NULL, old_user_uuid = NULL,
 			new_user_uuid = NULL)
 		{
@@ -3365,7 +3657,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		users.list = function(filters = NULL, where = NULL,
+		users_list = function(filters = NULL, where = NULL,
 			order = NULL, select = NULL, distinct = NULL,
 			limit = "100", offset = "0", count = "exact",
 			cluster_id = NULL, bypass_federation = NULL)
@@ -3391,7 +3683,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		repositories.get = function(uuid)
+		repositories_get = function(uuid)
 		{
 			endPoint <- stringr::str_interp("repositories/${uuid}")
 			url <- paste0(private$host, endPoint)
@@ -3411,7 +3703,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		repositories.create = function(repository,
+		repositories_create = function(repository,
 			ensure_unique_name = "false", cluster_id = NULL)
 		{
 			endPoint <- stringr::str_interp("repositories")
@@ -3437,7 +3729,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		repositories.update = function(repository, uuid)
+		repositories_update = function(repository, uuid)
 		{
 			endPoint <- stringr::str_interp("repositories/${uuid}")
 			url <- paste0(private$host, endPoint)
@@ -3461,7 +3753,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		repositories.delete = function(uuid)
+		repositories_delete = function(uuid)
 		{
 			endPoint <- stringr::str_interp("repositories/${uuid}")
 			url <- paste0(private$host, endPoint)
@@ -3481,7 +3773,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		repositories.get_all_permissions = function()
+		repositories_get_all_permissions = function()
 		{
 			endPoint <- stringr::str_interp("repositories/get_all_permissions")
 			url <- paste0(private$host, endPoint)
@@ -3501,7 +3793,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		repositories.list = function(filters = NULL,
+		repositories_list = function(filters = NULL,
 			where = NULL, order = NULL, select = NULL,
 			distinct = NULL, limit = "100", offset = "0",
 			count = "exact", cluster_id = NULL, bypass_federation = NULL)
@@ -3527,7 +3819,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		virtual_machines.get = function(uuid)
+		virtual_machines_get = function(uuid)
 		{
 			endPoint <- stringr::str_interp("virtual_machines/${uuid}")
 			url <- paste0(private$host, endPoint)
@@ -3547,7 +3839,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		virtual_machines.create = function(virtualmachine,
+		virtual_machines_create = function(virtualmachine,
 			ensure_unique_name = "false", cluster_id = NULL)
 		{
 			endPoint <- stringr::str_interp("virtual_machines")
@@ -3573,7 +3865,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		virtual_machines.update = function(virtualmachine, uuid)
+		virtual_machines_update = function(virtualmachine, uuid)
 		{
 			endPoint <- stringr::str_interp("virtual_machines/${uuid}")
 			url <- paste0(private$host, endPoint)
@@ -3597,7 +3889,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		virtual_machines.delete = function(uuid)
+		virtual_machines_delete = function(uuid)
 		{
 			endPoint <- stringr::str_interp("virtual_machines/${uuid}")
 			url <- paste0(private$host, endPoint)
@@ -3617,7 +3909,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		virtual_machines.logins = function(uuid)
+		virtual_machines_logins = function(uuid)
 		{
 			endPoint <- stringr::str_interp("virtual_machines/${uuid}/logins")
 			url <- paste0(private$host, endPoint)
@@ -3637,7 +3929,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		virtual_machines.get_all_logins = function()
+		virtual_machines_get_all_logins = function()
 		{
 			endPoint <- stringr::str_interp("virtual_machines/get_all_logins")
 			url <- paste0(private$host, endPoint)
@@ -3657,7 +3949,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		virtual_machines.list = function(filters = NULL,
+		virtual_machines_list = function(filters = NULL,
 			where = NULL, order = NULL, select = NULL,
 			distinct = NULL, limit = "100", offset = "0",
 			count = "exact", cluster_id = NULL, bypass_federation = NULL)
@@ -3683,7 +3975,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		workflows.get = function(uuid)
+		workflows_get = function(uuid)
 		{
 			endPoint <- stringr::str_interp("workflows/${uuid}")
 			url <- paste0(private$host, endPoint)
@@ -3703,7 +3995,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		workflows.create = function(workflow, ensure_unique_name = "false",
+		workflows_create = function(workflow, ensure_unique_name = "false",
 			cluster_id = NULL)
 		{
 			endPoint <- stringr::str_interp("workflows")
@@ -3729,7 +4021,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		workflows.update = function(workflow, uuid)
+		workflows_update = function(workflow, uuid)
 		{
 			endPoint <- stringr::str_interp("workflows/${uuid}")
 			url <- paste0(private$host, endPoint)
@@ -3753,7 +4045,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		workflows.delete = function(uuid)
+		workflows_delete = function(uuid)
 		{
 			endPoint <- stringr::str_interp("workflows/${uuid}")
 			url <- paste0(private$host, endPoint)
@@ -3773,7 +4065,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		workflows.list = function(filters = NULL,
+		workflows_list = function(filters = NULL,
 			where = NULL, order = NULL, select = NULL,
 			distinct = NULL, limit = "100", offset = "0",
 			count = "exact", cluster_id = NULL, bypass_federation = NULL)
@@ -3799,7 +4091,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		user_agreements.get = function(uuid)
+		user_agreements_get = function(uuid)
 		{
 			endPoint <- stringr::str_interp("user_agreements/${uuid}")
 			url <- paste0(private$host, endPoint)
@@ -3819,7 +4111,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		user_agreements.create = function(useragreement,
+		user_agreements_create = function(useragreement,
 			ensure_unique_name = "false", cluster_id = NULL)
 		{
 			endPoint <- stringr::str_interp("user_agreements")
@@ -3845,7 +4137,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		user_agreements.update = function(useragreement, uuid)
+		user_agreements_update = function(useragreement, uuid)
 		{
 			endPoint <- stringr::str_interp("user_agreements/${uuid}")
 			url <- paste0(private$host, endPoint)
@@ -3869,7 +4161,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		user_agreements.delete = function(uuid)
+		user_agreements_delete = function(uuid)
 		{
 			endPoint <- stringr::str_interp("user_agreements/${uuid}")
 			url <- paste0(private$host, endPoint)
@@ -3889,7 +4181,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		user_agreements.signatures = function()
+		user_agreements_signatures = function()
 		{
 			endPoint <- stringr::str_interp("user_agreements/signatures")
 			url <- paste0(private$host, endPoint)
@@ -3909,7 +4201,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		user_agreements.sign = function()
+		user_agreements_sign = function()
 		{
 			endPoint <- stringr::str_interp("user_agreements/sign")
 			url <- paste0(private$host, endPoint)
@@ -3929,7 +4221,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		user_agreements.list = function(filters = NULL,
+		user_agreements_list = function(filters = NULL,
 			where = NULL, order = NULL, select = NULL,
 			distinct = NULL, limit = "100", offset = "0",
 			count = "exact", cluster_id = NULL, bypass_federation = NULL)
@@ -3955,7 +4247,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		user_agreements.new = function()
+		user_agreements_new = function()
 		{
 			endPoint <- stringr::str_interp("user_agreements/new")
 			url <- paste0(private$host, endPoint)
@@ -3975,7 +4267,7 @@ Arvados <- R6::R6Class(
 			resource
 		},
 
-		configs.get = function()
+		configs_get = function()
 		{
 			endPoint <- stringr::str_interp("config")
 			url <- paste0(private$host, endPoint)
@@ -4011,3 +4303,4 @@ Arvados <- R6::R6Class(
 
 	cloneable = FALSE
 )
+
