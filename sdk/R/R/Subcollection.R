@@ -2,6 +2,95 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 
+#' getName
+#' Returns name of the file.
+#'
+#' @usage getName()
+#' @return Name of the file.
+#' @name getName
+NULL
+
+#' getRelativePath
+#'
+#' Returns subcollection path relative to the root.
+#'
+#' @usage getRelativePath()
+#' @return File path relative to the root
+#' @name getRelativePath
+NULL
+
+#' add
+#'
+#' Adds ArvadosFile or Subcollection specified by content to the subcollection.
+#'
+#' @usage add(content)
+#' @param content sth to be added
+#' @param relativePath path to add sth
+#' @return Collection object.
+#' @name add
+NULL
+
+#' remove
+#'
+#' Removes ArvadosFile or Subcollection specified by name from the subcollection.
+#'
+#' @usage remove(name)
+#' @param name Name of the file to be removed
+#' @return Collection object.
+#' @name name
+NULL
+
+#' get
+#'
+#' If relativePath is valid, returns ArvadosFile or Subcollection specified by relativePath, else returns NULL.
+#'
+#' @usage get(relativePath)
+#' @param relativePath path from sth is taken
+#' @return Collection object.
+#' @name get
+NULL
+
+
+#' getFileListing()
+#'
+#' Returns subcollections file content as character vector.
+#'
+#' @usage getFileListing()(fullPath)
+#' @param fullPath checking if TRUE
+#' @return Collection object.
+#' @name getFileListing()
+NULL
+
+#' getSizeInBytes
+#'
+#' Returns subcollections content size in bytes.
+#'
+#' @usage getSizeInBytes()
+#' @return Collection object.
+#' @name getSizeInBytes
+NULL
+
+#' move
+#'
+#' Moves subcollection to a new location inside collection.
+#'
+#' @usage move(destination)
+#' @param destination
+#' @return Collection object.
+#' @name name
+NULL
+
+#' copy
+#'
+#' Copies subcollection to a new location inside collection.
+#'
+#' @usage copy(destination)
+#' @param destination
+#' @return Collection object.
+#' @name name
+NULL
+
+
 #' Subcollection
 #'
 #' Subcollection class represents a folder inside Arvados collection.
@@ -17,15 +106,15 @@
 #'
 #' @section Methods:
 #' \describe{
-#'   \item{getName()}{Returns name of the subcollection.}
-#'   \item{getRelativePath()}{Returns subcollection path relative to the root.}
-#'   \item{add(content)}{Adds ArvadosFile or Subcollection specified by content to the subcollection.}
-#'   \item{remove(name)}{Removes ArvadosFile or Subcollection specified by name from the subcollection.}
-#'   \item{get(relativePath)}{If relativePath is valid, returns ArvadosFile or Subcollection specified by relativePath, else returns NULL.}
-#'   \item{getFileListing()}{Returns subcollections file content as character vector.}
-#'   \item{getSizeInBytes()}{Returns subcollections content size in bytes.}
-#'   \item{move(destination)}{Moves subcollection to a new location inside collection.}
-#'   \item{copy(destination)}{Copies subcollection to a new location inside collection.}
+#'   \item{}{\code{\link{getName}}}
+#'   \item{}{\code{\link{getRelativePath}}}
+#'   \item{}{\code{\link{add}}}
+#'   \item{}{\code{\link{remove}}}
+#'   \item{}{\code{\link{get}}}
+#'   \item{}{\code{\link{getFileListing}}}
+#'   \item{}{\code{\link{getSizeInBytes}}}
+#'   \item{}{\code{\link{move}}}
+#'   \item{}{\code{\link{copy}}}
 #' }
 #'
 #' @name Subcollection
