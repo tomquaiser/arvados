@@ -1,8 +1,25 @@
+#' read_arvados.file
+#'
+#' Read file content.
+#'
+#' @usage read_arvados.file(file, collection, sep = ',', istable = NULL, fileclass = "SeqFastadna", Ncol = NULL, Nrow = NULL)
+#' @param file name of the file
+#' @param collection the collection from which the file is reeaded 
+#' @param sep used separator in reading tsv, csv file format
+#' @param istable used in reading txt file to check if the file is table or not
+#' @param fileclass used in reading fasta file to set file class
+#' @param Ncol used in reading binary file to set numbers of columns in data.frame 
+#' @param Nrow used in reading binary file to set numbers of rows in data.frame size
+#' @return Collection object.
+#' @name read_arvados.file
+NULL
+
 # read function (deals with different formats)
-read_arvados.file <- function(file, istable = NULL, fileclass = "SeqFastadna", ile_kolumn = NULL, ile_wierszy = NULL)
+read_arvados.file <- function(file, collection, sep = ',', istable = NULL, fileclass = "SeqFastadna", Ncol = NULL, Nrow = NULL)
 { # file is arvadosFile after creating a connection
     # check if it is supported format
-    FileName <- file$getName() # if function will be in arvadosFile file
+    arvadosFile <- collection$get(file)
+    FileName <- arvadosFile$getName() # if function will be in arvadosFile file
     FileName <- tolower(FileName)
     FileFormat <- gsub(".*\\.", "", FileName)
     if (FileFormat == "txt") {
@@ -20,9 +37,17 @@ read_arvados.file <- function(file, istable = NULL, fileclass = "SeqFastadna", i
         arvConnection <- arvadosFile$connection("r")
         fileContent   <- read.table(arvConnection)
     }
-    else if (FileFormat == "csv") {
+    else if (FileFormat == "csv" || FileFormat == "tsv") {
         arvConnection <- arvadosFile$connection("r")
+        if (FileFormat == "tsv"){
+          mytable <- read.table(arvConnection, sep = '\t')
+        } else if (FileFormat == "csv" & sep = '\t') {
+          mytable <- read.table(arvConnection, sep = '\t')
+        } else if (FileFormat == "csv") {
         mytable <- read.table(arvConnection, sep = ',')
+        } else {
+          stop(paste('File format not supported, use arvadosFile$connection() and customise it'))
+        }
     }
     else if (FileFormat == "fasta") {
         fileContent <- arvadosFile$read("text")
@@ -53,8 +78,8 @@ read_arvados.file <- function(file, istable = NULL, fileclass = "SeqFastadna", i
         # function to precess data to binary format
         read_bin.file <- function(fileContent) {
             # read binfile
-            column.names <- readBin(fileContent, character(), n = ile_kolumn)
-            bindata <- readBin(fileContent, numeric(), ile_wierszy*ile_kolumn+ile_kolumn)
+            column.names <- readBin(fileContent, character(), n = Ncol)
+            bindata <- readBin(fileContent, numeric(), Nrow*Ncol+Ncol)
             # check
             res <- which(bindata < 0.0000001)
             if (is.list(res)) {
@@ -63,20 +88,20 @@ read_arvados.file <- function(file, istable = NULL, fileclass = "SeqFastadna", i
                 bindata <- bindata
             }
             # make a dataframe
-            data <- data.frame(matrix(data = NA, nrow = ile_wierszy, ncol = ile_kolumn))
-            for (i in 1:ile_kolumn) {
-                data[,i] <- bindata[(1+ile_wierszy*(i-1)):(ile_wierszy*i)]
+            data <- data.frame(matrix(data = NA, nrow = Nrow, ncol = Ncol))
+            for (i in 1:Ncol) {
+                data[,i] <- bindata[(1+Nrow*(i-1)):(Nrow*i)]
             }
             colnames(data) = column.names
 
-            len <- which(is.na(data[,ile_kolumn])) # error if sth went wrong
+            len <- which(is.na(data[,Ncol])) # error if sth went wrong
             if (length(len) == 0) {
                 data
             } else {
                 stop(paste("there is a factor or text in the table, customize the function by typing more arguments"))
             }
         }
-        if (is.null(ile_wierszy) | is.null(ile_kolumn)){
+        if (is.null(Nrow) | is.null(Ncol)){
             stop(paste('You need to specify numbers of columns and rows'))
         }
         if (is.null(istable)) {
@@ -94,43 +119,43 @@ read_arvados.file <- function(file, istable = NULL, fileclass = "SeqFastadna", i
         mytable <- readRDS(gzcon(arvConnection))
     }
     else {
-        stop(parse(('File format not supported')))
+        stop(parse(('File format not supported, use arvadosFile$connection() and customise it')))
     }
     }
 
 # ------------------------- USAGE -----------------------------
 
-arvadosFile   <- collection$get("iris.txt") # table
-wynik <- read_arvados.file(arvadosFile, istable = 'yes')
-wynik <- read_arvados.file(arvadosFile)
+#arvadosFile   <- collection$get("iris.txt") # table
+loaded_file <- read_arvados.file("iris.txt", collection, istable = 'yes')
+loaded_file <- read_arvados.file("iris.txt", collection)
 
-arvadosFile <- collection$get("potop.txt") # text
-wynik <- read_arvados.file(arvadosFile, istable = 'no')
+#arvadosFile <- collection$get("potop.txt") # text
+loaded_file <- read_arvados.file("potop.txt", collection, istable = 'no')
 
-arvadosFile   <- collection$get("iris_xlsx.xlsx") # excel
-wynik <- read_arvados.file(arvadosFile)
+#arvadosFile   <- collection$get("iris_xlsx.xlsx") # excel
+loaded_file <- read_arvados.file("iris_xlsx.xlsx", collection)
 
-arvadosFile   <- collection$get("mtcars.csv") # csv
-wynik <- read_arvados.file(arvadosFile)
+#arvadosFile   <- collection$get("mtcars.csv") # csv
+loaded_file <- read_arvados.file("mtcars.csv", collection)
 
-arvadosFile <- collection$get("fasta_example.fasta") # fasta
-wynik <- read_arvados.file(arvadosFile)
-wynik <- read_arvados.file(arvadosFile, fileclass = 'lala')
+#arvadosFile <- collection$get("fasta_example.fasta") # fasta
+loaded_file <- read_arvados.file("fasta_example.fasta", collection)
+loaded_file <- read_arvados.file("fasta_example.fasta", collection, fileclass = 'RNASeq')
 
-arvadosFile <- collection$get("testbin2.dat") # binary numbers
-wynik <- read_arvados.file(arvadosFile) # error :)
-wynik <- read_arvados.file(arvadosFile, ile_kolumn = 4, ile_wierszy = 32)
+#arvadosFile <- collection$get("testbin2.dat") # binary numbers
+loaded_file <- read_arvados.file("testbin2.dat", collection) # error :)
+loaded_file <- read_arvados.file("testbin2.dat", collection, Ncol = 4, Nrow = 32)
 
-arvadosFile <- collection$get("iris.dat") # binary numbers + factor
-wynik <- read_arvados.file(arvadosFile, ile_kolumn = 5, ile_wierszy = 150, istable = "factor")
+#arvadosFile <- collection$get("iris.dat") # binary numbers + factor
+loaded_file <- read_arvados.file("iris.dat", collection, Ncol = 5, Nrow = 150, istable = "factor")
 
 # binary numbers + text
 
-arvadosFile <- collection$get("mtcars.RDS") # rds numbers
-wynik <- read_arvados.file(arvadosFile)
+#arvadosFile <- collection$get("mtcars.RDS") # rds numbers
+loaded_file <- read_arvados.file("mtcars.RDS", collection)
 
-arvadosFile <- collection$get("iris.rds") # rds numbers + factor
-wynik <- read_arvados.file(arvadosFile)
+#arvadosFile <- collection$get("iris.rds") # rds numbers + factor
+loaded_file <- read_arvados.file("iris.rds", collection)
 
 # To sum up:
 # - txt text: works
