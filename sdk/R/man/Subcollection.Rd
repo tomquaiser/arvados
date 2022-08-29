@@ -22,15 +22,15 @@ It is essentially a composite of arvadosFiles and other subcollections.
 \section{Methods}{
 
 \describe{
-  \item{getName()}{Returns name of the subcollection.}
-  \item{getRelativePath()}{Returns subcollection path relative to the root.}
-  \item{add(content)}{Adds ArvadosFile or Subcollection specified by content to the subcollection.}
-  \item{remove(name)}{Removes ArvadosFile or Subcollection specified by name from the subcollection.}
-  \item{get(relativePath)}{If relativePath is valid, returns ArvadosFile or Subcollection specified by relativePath, else returns NULL.}
-  \item{getFileListing()}{Returns subcollections file content as character vector.}
-  \item{getSizeInBytes()}{Returns subcollections content size in bytes.}
-  \item{move(destination)}{Moves subcollection to a new location inside collection.}
-  \item{copy(destination)}{Copies subcollection to a new location inside collection.}
+  \item{}{\code{\link{getName}}}
+  \item{}{\code{\link{getRelativePath}}}
+  \item{}{\code{\link{add}}}
+  \item{}{\code{\link{remove}}}
+  \item{}{\code{\link{get}}}
+  \item{}{\code{\link{getFileListing}}}
+  \item{}{\code{\link{getSizeInBytes}}}
+  \item{}{\code{\link{move}}}
+  \item{}{\code{\link{copy}}}
 }
 }
 
