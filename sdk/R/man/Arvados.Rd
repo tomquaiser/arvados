@@ -4,11 +4,11 @@
 \alias{Arvados}
 \title{Arvados}
 \description{
-Arvados class gives users ability to access Arvados REST API.
+Arvados class gives users ability to access Arvados REST API. It also allowes user to manipulate collections (and projects?)
 }
 \section{Usage}{
 
-\preformatted{arv = Arvados$new(authToken = NULL, hostName = NULL, numRetries = 0)}
+\preformatted{arv = Arvados$new(authToken = "your Arvados token", hostName = "example.arvadosapi.com", numRetries = 0)}
 }
 
 \section{Arguments}{
@@ -16,191 +16,178 @@ Arvados class gives users ability to access Arvados REST API.
 \describe{
 	\item{authToken}{Authentification token. If not specified ARVADOS_API_TOKEN environment variable will be used.}
 	\item{hostName}{Host name. If not specified ARVADOS_API_HOST environment variable will be used.}
-	\item{numRetries}{Number which specifies how many times to retry failed service requests.}
+	\item{numRetries}{Number which specifies how many times to retry failed service requests_}
 }
 }
 
 \section{Methods}{
 
 \describe{
-	\item{}{\code{\link{api_client_authorizations.create}}}
-	\item{}{\code{\link{api_client_authorizations.create_system_auth}}}
-	\item{}{\code{\link{api_client_authorizations.current}}}
-	\item{}{\code{\link{api_client_authorizations.delete}}}
-	\item{}{\code{\link{api_client_authorizations.get}}}
-	\item{}{\code{\link{api_client_authorizations.list}}}
-	\item{}{\code{\link{api_client_authorizations.update}}}
-	\item{}{\code{\link{api_clients.create}}}
-	\item{}{\code{\link{api_clients.delete}}}
-	\item{}{\code{\link{api_clients.get}}}
-	\item{}{\code{\link{api_clients.list}}}
-	\item{}{\code{\link{api_clients.update}}}
-	\item{}{\code{\link{authorized_keys.create}}}
-	\item{}{\code{\link{authorized_keys.delete}}}
-	\item{}{\code{\link{authorized_keys.get}}}
-	\item{}{\code{\link{authorized_keys.list}}}
-	\item{}{\code{\link{authorized_keys.update}}}
-	\item{}{\code{\link{collections.create}}}
-	\item{}{\code{\link{collections.delete}}}
-	\item{}{\code{\link{collections.get}}}
-	\item{}{\code{\link{collections.list}}}
-	\item{}{\code{\link{collections.provenance}}}
-	\item{}{\code{\link{collections.trash}}}
-	\item{}{\code{\link{collections.untrash}}}
-	\item{}{\code{\link{collections.update}}}
-	\item{}{\code{\link{collections.used_by}}}
-	\item{}{\code{\link{container_requests.create}}}
-	\item{}{\code{\link{container_requests.delete}}}
-	\item{}{\code{\link{container_requests.get}}}
-	\item{}{\code{\link{container_requests.list}}}
-	\item{}{\code{\link{container_requests.update}}}
-	\item{}{\code{\link{containers.auth}}}
-	\item{}{\code{\link{containers.create}}}
-	\item{}{\code{\link{containers.current}}}
-	\item{}{\code{\link{containers.delete}}}
-	\item{}{\code{\link{containers.get}}}
-	\item{}{\code{\link{containers.list}}}
-	\item{}{\code{\link{containers.lock}}}
-	\item{}{\code{\link{containers.secret_mounts}}}
-	\item{}{\code{\link{containers.unlock}}}
-	\item{}{\code{\link{containers.update}}}
-	\item{}{\code{\link{groups.contents}}}
-	\item{}{\code{\link{groups.create}}}
-	\item{}{\code{\link{groups.delete}}}
-	\item{}{\code{\link{groups.get}}}
-	\item{}{\code{\link{groups.list}}}
-	\item{}{\code{\link{groups.trash}}}
-	\item{}{\code{\link{groups.untrash}}}
-	\item{}{\code{\link{groups.update}}}
-	\item{}{\code{\link{humans.create}}}
-	\item{}{\code{\link{humans.delete}}}
-	\item{}{\code{\link{humans.get}}}
-	\item{}{\code{\link{humans.list}}}
-	\item{}{\code{\link{humans.update}}}
-	\item{}{\code{\link{jobs.cancel}}}
-	\item{}{\code{\link{jobs.create}}}
-	\item{}{\code{\link{jobs.delete}}}
-	\item{}{\code{\link{jobs.get}}}
-	\item{}{\code{\link{jobs.list}}}
-	\item{}{\code{\link{jobs.lock}}}
-	\item{}{\code{\link{jobs.queue}}}
-	\item{}{\code{\link{jobs.queue_size}}}
-	\item{}{\code{\link{jobs.update}}}
-	\item{}{\code{\link{job_tasks.create}}}
-	\item{}{\code{\link{job_tasks.delete}}}
-	\item{}{\code{\link{job_tasks.get}}}
-	\item{}{\code{\link{job_tasks.list}}}
-	\item{}{\code{\link{job_tasks.update}}}
-	\item{}{\code{\link{keep_disks.create}}}
-	\item{}{\code{\link{keep_disks.delete}}}
-	\item{}{\code{\link{keep_disks.get}}}
-	\item{}{\code{\link{keep_disks.list}}}
-	\item{}{\code{\link{keep_disks.ping}}}
-	\item{}{\code{\link{keep_disks.update}}}
-	\item{}{\code{\link{keep_services.accessible}}}
-	\item{}{\code{\link{keep_services.create}}}
-	\item{}{\code{\link{keep_services.delete}}}
-	\item{}{\code{\link{keep_services.get}}}
-	\item{}{\code{\link{keep_services.list}}}
-	\item{}{\code{\link{keep_services.update}}}
-	\item{}{\code{\link{links.create}}}
-	\item{}{\code{\link{links.delete}}}
-	\item{}{\code{\link{links.get}}}
-	\item{}{\code{\link{links.get_permissions}}}
-	\item{}{\code{\link{links.list}}}
-	\item{}{\code{\link{links.update}}}
-	\item{}{\code{\link{logs.create}}}
-	\item{}{\code{\link{logs.delete}}}
-	\item{}{\code{\link{logs.get}}}
-	\item{}{\code{\link{logs.list}}}
-	\item{}{\code{\link{logs.update}}}
-	\item{}{\code{\link{nodes.create}}}
-	\item{}{\code{\link{nodes.delete}}}
-	\item{}{\code{\link{nodes.get}}}
-	\item{}{\code{\link{nodes.list}}}
-	\item{}{\code{\link{nodes.ping}}}
-	\item{}{\code{\link{nodes.update}}}
-	\item{}{\code{\link{pipeline_instances.cancel}}}
-	\item{}{\code{\link{pipeline_instances.create}}}
-	\item{}{\code{\link{pipeline_instances.delete}}}
-	\item{}{\code{\link{pipeline_instances.get}}}
-	\item{}{\code{\link{pipeline_instances.list}}}
-	\item{}{\code{\link{pipeline_instances.update}}}
-	\item{}{\code{\link{pipeline_templates.create}}}
-	\item{}{\code{\link{pipeline_templates.delete}}}
-	\item{}{\code{\link{pipeline_templates.get}}}
-	\item{}{\code{\link{pipeline_templates.list}}}
-	\item{}{\code{\link{pipeline_templates.update}}}
-	\item{}{\code{\link{projects.create}}}
-	\item{}{\code{\link{projects.delete}}}
-	\item{}{\code{\link{projects.get}}}
-	\item{}{\code{\link{projects.list}}}
-	\item{}{\code{\link{projects.update}}}
-	\item{}{\code{\link{repositories.create}}}
-	\item{}{\code{\link{repositories.delete}}}
-	\item{}{\code{\link{repositories.get}}}
-	\item{}{\code{\link{repositories.get_all_permissions}}}
-	\item{}{\code{\link{repositories.list}}}
-	\item{}{\code{\link{repositories.update}}}
-	\item{}{\code{\link{specimens.create}}}
-	\item{}{\code{\link{specimens.delete}}}
-	\item{}{\code{\link{specimens.get}}}
-	\item{}{\code{\link{specimens.list}}}
-	\item{}{\code{\link{specimens.update}}}
-	\item{}{\code{\link{traits.create}}}
-	\item{}{\code{\link{traits.delete}}}
-	\item{}{\code{\link{traits.get}}}
-	\item{}{\code{\link{traits.list}}}
-	\item{}{\code{\link{traits.update}}}
-	\item{}{\code{\link{user_agreements.create}}}
-	\item{}{\code{\link{user_agreements.delete}}}
-	\item{}{\code{\link{user_agreements.get}}}
-	\item{}{\code{\link{user_agreements.list}}}
-	\item{}{\code{\link{user_agreements.new}}}
-	\item{}{\code{\link{user_agreements.sign}}}
-	\item{}{\code{\link{user_agreements.signatures}}}
-	\item{}{\code{\link{user_agreements.update}}}
-	\item{}{\code{\link{users.activate}}}
-	\item{}{\code{\link{users.create}}}
-	\item{}{\code{\link{users.current}}}
-	\item{}{\code{\link{users.delete}}}
-	\item{}{\code{\link{users.get}}}
-	\item{}{\code{\link{users.list}}}
-	\item{}{\code{\link{users.merge}}}
-	\item{}{\code{\link{users.setup}}}
-	\item{}{\code{\link{users.system}}}
-	\item{}{\code{\link{users.unsetup}}}
-	\item{}{\code{\link{users.update}}}
-	\item{}{\code{\link{virtual_machines.create}}}
-	\item{}{\code{\link{virtual_machines.delete}}}
-	\item{}{\code{\link{virtual_machines.get}}}
-	\item{}{\code{\link{virtual_machines.get_all_logins}}}
-	\item{}{\code{\link{virtual_machines.list}}}
-	\item{}{\code{\link{virtual_machines.logins}}}
-	\item{}{\code{\link{virtual_machines.update}}}
-	\item{}{\code{\link{workflows.create}}}
-	\item{}{\code{\link{workflows.delete}}}
-	\item{}{\code{\link{workflows.get}}}
-	\item{}{\code{\link{workflows.list}}}
-	\item{}{\code{\link{workflows.update}}}
+	\item{}{\code{\link{api_client_authorizations_create}}}
+	\item{}{\code{\link{api_client_authorizations_create_system_auth}}}
+	\item{}{\code{\link{api_client_authorizations_current}}}
+	\item{}{\code{\link{api_client_authorizations_delete}}}
+	\item{}{\code{\link{api_client_authorizations_get}}}
+	\item{}{\code{\link{api_client_authorizations_list}}}
+	\item{}{\code{\link{api_client_authorizations_update}}}
+	\item{}{\code{\link{api_clients_create}}}
+	\item{}{\code{\link{api_clients_delete}}}
+	\item{}{\code{\link{api_clients_get}}}
+	\item{}{\code{\link{api_clients_list}}}
+	\item{}{\code{\link{api_clients_update}}}
+	\item{}{\code{\link{authorized_keys_create}}}
+	\item{}{\code{\link{authorized_keys_delete}}}
+	\item{}{\code{\link{authorized_keys_get}}}
+	\item{}{\code{\link{authorized_keys_list}}}
+	\item{}{\code{\link{authorized_keys_update}}}
+	\item{}{\code{\link{collections_create}}}
+	\item{}{\code{\link{collections_delete}}}
+	\item{}{\code{\link{collections_get}}}
+	\item{}{\code{\link{collections_list}}}
+	\item{}{\code{\link{collections_provenance}}}
+	\item{}{\code{\link{collections_trash}}}
+	\item{}{\code{\link{collections_untrash}}}
+	\item{}{\code{\link{collections_update}}}
+	\item{}{\code{\link{collections_used_by}}}
+	\item{}{\code{\link{configs.get}}}
+	\item{}{\code{\link{projects_properties_set}}}
+	\item{}{\code{\link{projects_properties_append}}}
+	\item{}{\code{\link{projects_properties_get}}}
+	\item{}{\code{\link{projects_properties_delete}}}
+	\item{}{\code{\link{container_requests_create}}}
+	\item{}{\code{\link{container_requests_delete}}}
+	\item{}{\code{\link{container_requests_get}}}
+	\item{}{\code{\link{container_requests_list}}}
+	\item{}{\code{\link{container_requests_update}}}
+	\item{}{\code{\link{containers_auth}}}
+	\item{}{\code{\link{containers_create}}}
+	\item{}{\code{\link{containers_current}}}
+	\item{}{\code{\link{containers_delete}}}
+	\item{}{\code{\link{containers_get}}}
+	\item{}{\code{\link{containers_list}}}
+	\item{}{\code{\link{containers_lock}}}
+	\item{}{\code{\link{containers_secret_mounts}}}
+	\item{}{\code{\link{containers_unlock}}}
+	\item{}{\code{\link{containers_update}}}
+	\item{}{\code{\link{groups_contents}}}
+	\item{}{\code{\link{groups_create}}}
+	\item{}{\code{\link{groups_delete}}}
+	\item{}{\code{\link{groups_get}}}
+	\item{}{\code{\link{groups_list}}}
+	\item{}{\code{\link{groups_shared}}}
+	\item{}{\code{\link{groups_trash}}}
+	\item{}{\code{\link{groups_untrash}}}
+	\item{}{\code{\link{groups_update}}}
+	\item{}{\code{\link{keep_services_accessible}}}
+	\item{}{\code{\link{keep_services_create}}}
+	\item{}{\code{\link{keep_services_delete}}}
+	\item{}{\code{\link{keep_services_get}}}
+	\item{}{\code{\link{keep_services_list}}}
+	\item{}{\code{\link{keep_services_update}}}
+	\item{}{\code{\link{projects_permission_set}}}
+	\item{}{\code{\link{projects_permission_remove}}}
+	\item{}{\code{\link{projects_permission_update}}}
+	\item{}{\code{\link{projects_permission_check}}}
+	\item{}{\code{\link{links_create}}}
+	\item{}{\code{\link{links_delete}}}
+	\item{}{\code{\link{links_get}}}
+	\item{}{\code{\link{links_get_permissions}}}
+	\item{}{\code{\link{links_list}}}
+	\item{}{\code{\link{links_update}}}
+	\item{}{\code{\link{logs_create}}}
+	\item{}{\code{\link{logs_delete}}}
+	\item{}{\code{\link{logs_get}}}
+	\item{}{\code{\link{logs_list}}}
+	\item{}{\code{\link{logs_update}}}
+	\item{}{\code{\link{projects_create}}}
+	\item{}{\code{\link{projects_delete}}}
+	\item{}{\code{\link{projects_exist}}}
+	\item{}{\code{\link{projects_get}}}
+	\item{}{\code{\link{projects_list}}}
+	\item{}{\code{\link{projects_update}}}
+	\item{}{\code{\link{repositories_create}}}
+	\item{}{\code{\link{repositories_delete}}}
+	\item{}{\code{\link{repositories_get}}}
+	\item{}{\code{\link{repositories_get_all_permissions}}}
+	\item{}{\code{\link{repositories_list}}}
+	\item{}{\code{\link{repositories_update}}}
+	\item{}{\code{\link{user_agreements_create}}}
+	\item{}{\code{\link{user_agreements_delete}}}
+	\item{}{\code{\link{user_agreements_get}}}
+	\item{}{\code{\link{user_agreements_list}}}
+	\item{}{\code{\link{user_agreements_new}}}
+	\item{}{\code{\link{user_agreements_sign}}}
+	\item{}{\code{\link{user_agreements_signatures}}}
+	\item{}{\code{\link{user_agreements_update}}}
+	\item{}{\code{\link{users_activate}}}
+	\item{}{\code{\link{users_create}}}
+	\item{}{\code{\link{users_current}}}
+	\item{}{\code{\link{users_delete}}}
+	\item{}{\code{\link{users_get}}}
+	\item{}{\code{\link{users_list}}}
+	\item{}{\code{\link{users_merge}}}
+	\item{}{\code{\link{users_setup}}}
+	\item{}{\code{\link{users_system}}}
+	\item{}{\code{\link{users_unsetup}}}
+	\item{}{\code{\link{users_update}}}
+	\item{}{\code{\link{virtual_machines_create}}}
+	\item{}{\code{\link{virtual_machines_delete}}}
+	\item{}{\code{\link{virtual_machines_get}}}
+	\item{}{\code{\link{virtual_machines_get_all_logins}}}
+	\item{}{\code{\link{virtual_machines_list}}}
+	\item{}{\code{\link{virtual_machines_logins}}}
+	\item{}{\code{\link{virtual_machines_update}}}
+	\item{}{\code{\link{workflows_create}}}
+	\item{}{\code{\link{workflows_delete}}}
+	\item{}{\code{\link{workflows_get}}}
+	\item{}{\code{\link{workflows_list}}}
+	\item{}{\code{\link{workflows_update}}}
 }
 }
 
 \examples{
 \dontrun{
+# initialize API and a collection object:
 arv <- Arvados$new("your Arvados token", "example.arvadosapi.com")
+collection <- arv$collections_get("uuid")
 
-collection <- arv$collections.get("uuid")
+# Filtr collection by metadata and create list of them
+collectionList <- arv$collections_list(list(list("name", "like", "Test\%")))
+# add offset of 0 and default limit of 100
+collectionList <- arv$collections_list(list(list("name", "like", "Test\%")), limit = 10, offset = 2)
+# list all collections even if the number of items is greater than maximum API limit:
+collectionList <- listAll(arv$collections_list, list(list("name", "like", "Test\%")))
 
-collectionList <- arv$collections.list(list(list("name", "like", "Test\%")))
-collectionList <- listAll(arv$collections.list, list(list("name", "like", "Test\%")))
+# delete a collection:
+deletedCollection <- arv$collections_delete("uuid")
 
-deletedCollection <- arv$collections.delete("uuid")
-
-updatedCollection <- arv$collections.update(list(name = "New name", description = "New description"),
+# update a collection’s metadata:
+updatedCollection <- arv$collections_update(list(name = "New name", description = "New description"),
                                             "uuid")
 
-createdCollection <- arv$collections.create(list(name = "Example",
+# create a new collection:
+createdCollection <- arv$collections_create(list(name = "Example",
                                                  description = "This is a test collection"))
+
+# get a project:
+project <- arv$projects_get("ardev-j7d0g-u8f5hi7a9klsiw7")
+
+# list projects:
+# list subprojects of a project
+projects <- arv$projects_list(list(list("owner_uuid", "=", "aaaaa-j7d0g-ccccccccccccccc")))
+# list projects which have names beginning with Example
+examples <- arv$projects_list(list(list("name","like","Example\%")))
+# list all projects even if the number of items is greater than maximum API limit:
+projects <- listAll(arv$projects_list, list(list("name","like","Example\%")))
+
+# delete a project:
+deletedProject <- arv$projects_delete(newProject[["uuid"]])
+
+# create project:
+newProject <- arv$projects_create(list(name = "project_name", description = "project description"))
+
+# update project:
+updatedProject <- arv$projects_update(list(name = "new_name", description = "new description"), newProject$uuid)
+
 }
 }
