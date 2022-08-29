@@ -1,10 +1,97 @@
-# Copyright (C) The Arvados Authors. All rights reserved.
-#
-# SPDX-License-Identifier: Apache-2.0
+
+#' add
+#'
+#' Adds ArvadosFile or Subcollection specified by content to the collection.
+#'
+#' @usage add(content)
+#' @param content sth to be added
+#' @param relativePath path to add sth
+#' @return Collection object.
+#' @name add
+NULL
+
+#' create
+#'
+#' Creates one or more ArvadosFiles and adds them to the collection at specified path.
+#'
+#' @usage mainFile <- collection$create("cpp/src/main.cpp")[[1]]
+#' @usage fileList <- collection$create(c("main.cpp", lib.dll), "cpp/src/")
+#' @param files sth to be created
+#' @return ArvadosFile objects.
+#' @name create
+NULL
+
+#' remove
+#'
+#' Remove one or more files from the collection.
+#'
+#' @usage remove(fileNames)
+#' @param fileNames sth to be removed
+#' @return Collection object.
+#' @name remove
+NULL
+
+#' move
+#'
+#' Moves ArvadosFile or Subcollection to another location in the collection.
+#'
+#' @usage move(content, destination)
+#' @param content sth to be moved
+#' @param destination path to move sth
+#' @return Collection object.
+#' @name move
+NULL
+
+#' copy
+#'
+#' Copies ArvadosFile or Subcollection to another location in the collection.
+#'
+#' @usage copy(content, destination)
+#' @param content sth to be copied
+#' @param destination path to copy sth
+#' @return Collection object.
+#' @name copy
+NULL
+
+#' readArvFile
+#'
+#' Read file content.
+#'
+#' @usage readArvFile(file, col, sep = ',', istable = NULL, fileclass = "SeqFastadna", Ncol = NULL, Nrow = NULL)
+#' @param file name of the file
+#' @param col the collection from which the file is reeaded
+#' @param sep used separator in reading tsv, csv file format
+#' @param istable used in reading txt file to check if the file is table or not
+#' @param fileclass used in reading fasta file to set file class
+#' @param Ncol used in reading binary file to set numbers of columns in data.frame
+#' @param Nrow used in reading binary file to set numbers of rows in data.frame size
+#' @return Collection object.
+#' @name readArvFile
+NULL
+
+#' getFileListing
+#'
+#' Returns collections file content as character vector.
+#'
+#' @usage getFileListing()
+#' @return Character vector.
+#' @name getFileListing
+NULL
+
+#' get
+#'
+#' If relativePath is valid, returns ArvadosFile or Subcollection specified by relativePath, else returns NULL.
+#'
+#' @usage get(relativePath)
+#' @param relativePath path from sth is taken
+#' @return Collection object.
+#' @name get
+NULL
 
 #' Collection
 #'
-#' Collection class provides interface for working with Arvados collections.
+#' Collection class provides interface for working with Arvados collections,
+#' for exaplme actions like creating, updating, moving or removing are possible.
 #'
 #' @section Usage:
 #' \preformatted{collection = Collection$new(arv, uuid)}
@@ -17,29 +104,42 @@
 #'
 #' @section Methods:
 #' \describe{
-#'   \item{add(content)}{Adds ArvadosFile or Subcollection specified by content to the collection.}
-#'   \item{create(files)}{Creates one or more ArvadosFiles and adds them to the collection at specified path.}
-#'   \item{remove(fileNames)}{Remove one or more files from the collection.}
-#'   \item{move(content, destination)}{Moves ArvadosFile or Subcollection to another location in the collection.}
-#'   \item{copy(content, destination)}{Copies ArvadosFile or Subcollection to another location in the collection.}
-#'   \item{getFileListing()}{Returns collections file content as character vector.}
-#'   \item{get(relativePath)}{If relativePath is valid, returns ArvadosFile or Subcollection specified by relativePath, else returns NULL.}
+#' 	\item{}{\code{\link{add}}}
+#' 	\item{}{\code{\link{create}}}
+#' 	\item{}{\code{\link{remove}}}
+#' 	\item{}{\code{\link{move}}}
+#' 	\item{}{\code{\link{readArvFile}}}
+#' 	\item{}{\code{\link{copy}}}
+#' 	\item{}{\code{\link{getFileListing}}}
+#' 	\item{}{\code{\link{get}}}
 #' }
+#'
+#' @seealso
+#' \code{\link{https://github.com/arvados/arvados/tree/main/sdk/R}}
 #'
 #' @name Collection
 #' @examples
 #' \dontrun{
+#' # initialize API and a collection object:
 #' arv <- Arvados$new("your Arvados token", "example.arvadosapi.com")
 #' collection <- Collection$new(arv, "uuid")
 #'
-#' createdFiles <- collection$create(c("main.cpp", lib.dll), "cpp/src/")
+#' # Create new file in a collection
+#' mainFile <- collection$create("cpp/src/main.cpp")[[1]]
+#' fileList <- collection$create(c("main.cpp", lib.dll), "cpp/src/")
+#' # NOTE: It returns a vector of one or more ArvadosFile objects
 #'
-#' collection$remove("location/to/my/file.cpp")
-#'
-#' collection$move("folder/file.cpp", "file.cpp")
-#'
+#' # Get ArvadosFile or Subcollection from internal tree-like structure
 #' arvadosFile <- collection$get("location/to/my/file.cpp")
 #' arvadosSubcollection <- collection$get("location/to/my/directory/")
+#'
+#' # Delete file or list of them from a collection
+#' collection$remove("location/to/my/file.cpp") # delete file
+#' collection$remove(c("path/to/my/file.cpp", "path/to/other/file.cpp")) # delete list of files
+#' # NOTE: You can remove both Subcollection and ArvadosFile. If subcollection contains more files or folders they will be removed recursively.
+#'
+#' # Move or rename a file or folder within a collection
+#' collection$move("folder/file.cpp", "file.cpp")
 #' }
 NULL
 
@@ -95,6 +195,114 @@ Collection <- R6::R6Class(
                 stop(paste0("Expected AravodsFile or Subcollection object, got ",
                             paste0("(", paste0(class(content), collapse = ", "), ")"),
                             "."))
+            }
+        },
+	    
+	readArvFile = function(file, con, sep = ',', istable = NULL, fileclass = "SeqFastadna", Ncol = NULL, Nrow = NULL)
+        {
+            print("plis")
+            arvFile <- self$get(file)
+            FileName <- arvFile$getName()
+            FileName <- tolower(FileName)
+            FileFormat <- gsub(".*\\.", "", FileName)
+            if (FileFormat == "txt") {
+                if (is.null(istable)){
+                    stop(paste('You need to paste whether it is a text or table file'))
+                } else if (istable == 'no') {
+                    fileContent <- arvFile$read("text") # used to read
+                    fileContent <- gsub("[\r\n]", " ", fileContent)
+                } else if (istable == 'yes') {
+                    arvConnection <- arvFile$connection("r") # used to make possible use different function later
+                    fileContent <- read.table(arvConnection)
+                }
+            }
+            else if (FileFormat  == "xlsx") {
+                arvConnection <- arvFile$connection("r")
+                fileContent   <- read.table(arvConnection)
+            }
+            else if (FileFormat == "csv" || FileFormat == "tsv") {
+                arvConnection <- arvFile$connection("r")
+                if (FileFormat == "tsv"){
+                    mytable <- read.table(arvConnection, sep = '\t')
+                } else if (FileFormat == "csv" & sep == '\t') {
+                    mytable <- read.table(arvConnection, sep = '\t')
+                } else if (FileFormat == "csv") {
+                    mytable <- read.table(arvConnection, sep = ',')
+                } else {
+                    stop(paste('File format not supported, use arvadosFile$connection() and customise it'))
+                }
+            }
+            else if (FileFormat == "fasta") {
+                fileContent <- arvFile$read("text")
+
+                # function to prosess data to fasta file
+                read_fasta.file <- function(file){
+                    new_file <- file
+                    name <- sub("\r\n.*", "", new_file)
+                    new_file <- sub(name, '', new_file)
+                    new_file <- gsub("[\r\n]", "", new_file)
+                    # add first atrr (name)
+                    name <- sub(" .*", "", name)
+                    name <- sub(".*>", "", name)
+                    # add second atrr (Annot)
+                    annot <- sub("\r.*", "", file)
+                    # final:
+                    attr(new_file, 'name') <- name
+                    attr(new_file, 'Annot') <- annot
+                    attr(new_file, 'class') <- fileclass
+                    new_file
+                }
+                fastafile <- read_fasta.file(fileContent)
+            }
+            else if (FileFormat == "dat") {
+                #fileContent <- arvFile$read()
+                fileContent <- gzcon(arvFile$connection("rb"))
+
+                # function to precess data to binary format
+                read_bin.file <- function(fileContent) {
+                    # read binfile
+                    column.names <- readBin(fileContent, character(), n = Ncol)
+                    bindata <- readBin(fileContent, numeric(), Nrow*Ncol+Ncol)
+                    # check
+                    res <- which(bindata < 0.0000001)
+                    if (is.list(res)) {
+                        bindata <- bindata[-res]
+                    } else {
+                        bindata <- bindata
+                    }
+                    # make a dataframe
+                    data <- data.frame(matrix(data = NA, nrow = Nrow, ncol = Ncol))
+                    for (i in 1:Ncol) {
+                        data[,i] <- bindata[(1+Nrow*(i-1)):(Nrow*i)]
+                    }
+                    colnames(data) = column.names
+
+                    len <- which(is.na(data[,Ncol])) # error if sth went wrong
+                    if (length(len) == 0) {
+                        data
+                    } else {
+                        stop(paste("there is a factor or text in the table, customize the function by typing more arguments"))
+                    }
+                }
+                if (is.null(Nrow) | is.null(Ncol)){
+                    stop(paste('You need to specify numbers of columns and rows'))
+                }
+                if (is.null(istable)) {
+                    fileContent <- read_bin.file(fileContent) # call a function
+                } else if (istable == "factor") { # if there is a table with col name
+                    #col_factor <- readline(prompt= "Which column contains factor? ") # 5
+                    #col_factor <- as.integer(col_factor)
+                    fileContent <- read_bin.file(fileContent)
+                    #mess <- paste("Remember to change factor to string")
+                    #return(list(fileContent, mess))
+                }
+            }
+            else if (FileFormat == "rds") {
+                arvConnection <- arvFile$connection("rb")
+                mytable <- readRDS(gzcon(arvConnection))
+            }
+            else {
+                stop(parse(('File format not supported, use arvadosFile$connection() and customise it')))
             }
         },
 
