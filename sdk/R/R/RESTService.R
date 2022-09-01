@@ -227,8 +227,12 @@ RESTService <- R6::R6Class(
             serverResponse <- self$http$exec("PUT", fileURL, headers, body,
                                              retryTimes = self$numRetries)
 
-            if(serverResponse$status_code < 200 || serverResponse$status_code >= 300)
-                stop(paste("Server code:", serverResponse$status_code))
+            if (serverResponse$status_code < 200){ # to wyrzuca błędy
+                stop(paste("Server code:", serverResponse$status_code))}
+            else if (serverResponse$status_code >= 300 & serverResponse$status_code < 422) {
+                stop(paste("Server code:", serverResponse$status_code))}
+            else if (serverResponse$status_code == 422 ) {
+                stop(paste("Project of that name already exists. If you want to change it use projects.update() instead"))}
 
             paste("File created:", relativePath)
         }
