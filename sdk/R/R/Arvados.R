@@ -1492,7 +1492,7 @@ NULL
 #'
 #' projects_delete is equivalent to groups_delete method.
 #'
-#' @usage arv$project.delete(uuid)
+#' @usage arv$projects_delete(uuid)
 #' @param uuid The UUID of the Group in question.
 #' @return Group object.
 #' @name projects_delete
@@ -2796,7 +2796,7 @@ Arvados <- R6::R6Class(
 
 			if(!is.null(resource$errors)){
 			    if(identical(sub('Entity:.*',"", resource$errors), "//railsapi.internal/arvados/v1/groups: 422 Unprocessable ")){
-			        cat(format("Project of that name already exist. If you want to update it use project.update() instead"))
+			        cat(format("Project of that name already exist. If you want to update it use projects_update() instead"))
 			    }else{
 			        stop(resource$errors)
 			    }
