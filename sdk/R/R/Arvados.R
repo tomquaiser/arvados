@@ -1453,7 +1453,7 @@ NULL
 #' @name projects_exist
 NULL
 
-#' project.get
+#' projects_get
 #'
 #' projects_get is equivalent to groups_get method.
 #'
@@ -1463,7 +1463,7 @@ NULL
 #' @name projects_get
 NULL
 
-#' project.create
+#' projects_create
 #'
 #' projects_create wrapps groups_create method by setting group_class attribute to "project".
 #'
@@ -1477,7 +1477,7 @@ NULL
 #' @name projects_create
 NULL
 
-#' project.update
+#' projects_update
 #'
 #' projects_update wrapps groups_update method by setting group_class attribute to "project".
 #'
@@ -1488,7 +1488,7 @@ NULL
 #' @name projects_update
 NULL
 
-#' project.delete
+#' projects_delete
 #'
 #' projects_delete is equivalent to groups_delete method.
 #'
@@ -1498,7 +1498,7 @@ NULL
 #' @name projects_delete
 NULL
 
-#' project.list
+#' projects_list
 #'
 #' projects_list wrapps groups_list method by setting group_class attribute to "project".
 #'
@@ -1697,7 +1697,7 @@ NULL
 #' deletedProject <- arv$projects_delete(newProject[["uuid"]])
 #'
 #' # create project:
-#' newProject <- arv$projects_create(list(name = "project_name", description = "project description"))
+#' newProject <- arv$projects_create(list(name = "projects_name", description = "project description"))
 #'
 #' # update project:
 #' updatedProject <- arv$projects_update(list(name = "new_name", description = "new description"), newProject$uuid)
