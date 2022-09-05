@@ -1597,7 +1597,7 @@ NULL
 #' 	\item{}{\code{\link{keep_services_get}}}
 #' 	\item{}{\code{\link{keep_services_list}}}
 #' 	\item{}{\code{\link{keep_services_update}}}
-#' 	\item{}{\code{\link{projects_permission_set}}}
+#' 	\item{}{\code{\link{projects_permission_give}}}
 #' 	\item{}{\code{\link{projects_permission_remove}}}
 #' 	\item{}{\code{\link{projects_permission_update}}}
 #' 	\item{}{\code{\link{projects_permission_check}}}
