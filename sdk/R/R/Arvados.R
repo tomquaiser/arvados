@@ -1404,6 +1404,7 @@ NULL
 #'
 #' projects_properties_set is a method defined in Arvados class that enables setting properties.
 #'
+#TOM: Please add an example of listProperties. I expect this is actually a list of key-value pairs, correct. Please describe the difference to append.
 #' @usage arv$projects_properties_set(listProperties, projectUUID)
 #' @param listProperties List of new properties.
 #' @param projectUUID A uuid of a project / file.
@@ -1415,6 +1416,7 @@ NULL
 #'
 #' projects_properties_append is a method defined in Arvados class that enables appending properties.
 #'
+#TOM: Please add an example of listProperties. I expect this is actually a list of key-value pairs, correct. Please describe the difference to set.
 #' @usage arv$projects_properties_append(listOfNewProperties, projectUUID)
 #' @param listOfNewProperties List of new properties.
 #' @param projectUUID A uuid of a project / file.
@@ -1424,16 +1426,19 @@ NULL
 
 #' projects_properties_get
 #'
+#TOM: Description not correct below.
 #' projects_properties_get is a method defined in Arvados class that enables appending properties.
 #'
 #' @usage arv$projects_properties_get(uuid)
 #' @param uuid A uuid of a project / file.
+#TOM: Shouldn't this return a list of properties?
 #' @return Project object.
 #' @name projects_properties_get
 NULL
 
 #' projects_properties_delete
 #'
+#TOM: Description not correct below.
 #' projects_properties_delete is a method defined in Arvados class that enables appending properties.
 #'
 #' @usage arv$projects_properties_delete(oneProp, uuid)
@@ -1445,6 +1450,7 @@ NULL
 
 #' projects_exist
 #'
+#TOM: text below: change id -> if . Why does it return a project. Shouldn't this return TRUE/FALSE
 #' projects_exist is a method defined in Arvados class that enables checking id the project with such a UUID exist.
 #'
 #' @usage arv$projects_exist(uuid)
@@ -1455,6 +1461,7 @@ NULL
 
 #' projects_get
 #'
+#TOM: Description below should be self contained. The current description requires me to jump to groups_get. Why do we need two equivalent functions?
 #' projects_get is equivalent to groups_get method.
 #'
 #' @usage arv$projects_get(uuid)
@@ -1465,12 +1472,14 @@ NULL
 
 #' projects_create
 #'
+#TOM: Description below should be self contained.
 #' projects_create wrapps groups_create method by setting group_class attribute to "project".
 #'
 #' @usage arv$projects_create(name, description, owner_uuid, properties = NULL, ensure_unique_name = "false")
 #' @param name Name of the project.
 #' @param description Description of the project.
 #' @param owner_uuid UUID of the maternal project to created one.
+#TOM: Like above the list of properties is not sef-explanatory. I think it is a list of key-value pairs. How should they be formated?
 #' @param properties List of the properties of the project.
 #' @param ensure_unique_name Adjust name to ensure uniqueness instead of returning an error on (owner_uuid, name) collision_
 #' @return Group object.
@@ -1479,6 +1488,7 @@ NULL
 
 #' projects_update
 #'
+#TOM: Description below should be self contained.
 #' projects_update wrapps groups_update method by setting group_class attribute to "project".
 #'
 #' @usage arv$projects_update(..., uuid)
@@ -1490,6 +1500,7 @@ NULL
 
 #' projects_delete
 #'
+#TOM: Description below should be self contained. How can this function return a Group object after deletion?
 #' projects_delete is equivalent to groups_delete method.
 #'
 #' @usage arv$projects_delete(uuid)
@@ -1500,6 +1511,8 @@ NULL
 
 #' projects_list
 #'
+#TOM: Description below should be self contained. User should not care about groups_list. Same is true for the parameters of this function. how to set filters, how to set where ... .
+# Think of a user using the help function within R-Studio. This description will not help a lot and the user needs to go to groups_list.
 #' projects_list wrapps groups_list method by setting group_class attribute to "project".
 #'
 #' @usage arv$projects_list(filters = NULL,
@@ -1771,6 +1784,7 @@ Arvados <- R6::R6Class(
 
 		projects_properties_append = function(properties, object)
 		{
+		#TOM: Why is Proj with capital P. Same for functions below. Please stay within naming conventions.
 		    Proj <- self$projects_list(list(list('uuid', 'like', object)))
 		    ProjProp <- Proj$items[[1]]$properties
 		    newListOfProperties <- c(ProjProp, properties)
@@ -1791,6 +1805,7 @@ Arvados <- R6::R6Class(
 		    Proj <- arv$projects_list(list(list('uuid', 'like', uuid))) # find project
 		    ProjProp <- Proj$items[[1]]$properties # find project properties
 		    for (i in 1:length(ProjProp)){
+			#TOM: please rename wynik to a english term. The comment in the line below is not proper english. 
 		        wynik <- identical(ProjProp[i],oneProp) # does some of the properties simillar to the oneProp?
 		        if (wynik == TRUE) {
 		            ProjProp <- ProjProp[names(ProjProp) != names(oneProp)]
@@ -1799,6 +1814,7 @@ Arvados <- R6::R6Class(
 		    }
 		},
 
+		#TOM: I assume vec is old and vec2 is new. Can you please give these better names.
 		projects_update = function(..., uuid) {
 		    vec <- list(...)
 		    for (i in 1:length(vec))
@@ -3144,7 +3160,7 @@ Arvados <- R6::R6Class(
 		projects_permission_remove = function(type, object, user)
 		{
 		    examples <- self$links_list(list(list("head_uuid","like", object))) # find file from someone
-
+#TOM please use englisch. Please think of more speaking names than w, w3, w4.
 		    w <- examples[which(sapply(examples$items, "[[", "tail_uuid") == user)] # wybór usera z dostępnych
 		    w3 <- w$items[which(sapply(w$items, "[[", "name") == type)] # wybór typu z dostępnych
 		    w4 <- w3[which(sapply(w3, "[[", "link_class") == 'permission')] # stałe
@@ -3156,7 +3172,7 @@ Arvados <- R6::R6Class(
 		    }
 
 		},
-
+#TOM please use englisch. Please think of more speaking names than w, w3, w4. Why wrong!
 		projects_permission_update = function(type_old, type_new, object, user) # check # wrong!!!
 		{
 		    link <- list("name" = type_new)
@@ -3174,6 +3190,7 @@ Arvados <- R6::R6Class(
 		    }
 		},
 
+#TOM please use englisch. Please think of more speaking names than w, w3, w4.
 		projects_permission_check = function(object, user, type = NULL) # checkes all the permissions or the specified one
 		{
 		    examples <- self$links_list(list(list("head_uuid","like", object))) # find file from someone
@@ -4303,4 +4320,3 @@ Arvados <- R6::R6Class(
 
 	cloneable = FALSE
 )
-
